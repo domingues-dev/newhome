@@ -13,8 +13,9 @@ class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBar.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        tabBar.tintColor = #colorLiteral(red: 0.2156862745, green: 0.3725490196, blue: 0.8784313725, alpha: 1)
+        tabBar.backgroundColor = .white
+        tabBar.tintColor = UIColor(named: "blue")
+        navigationController?.navigationBar.backgroundColor = .white
         tabBar.isTranslucent = false
         setViewControllers(
             [
@@ -59,7 +60,7 @@ class TabBarController: UITabBarController {
         profileViewController.presenter = profilePresenter
         
         profileViewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "profile-icon"), tag: 4)
-        return profileViewController
+        return BaseNavigationController(rootViewController: profileViewController)
     }
     
 }

@@ -32,8 +32,9 @@ extension ProfilePresenter: ProfileBusinessPresenter {
 //MARK: - ProfilePresenterProtocol
 
 extension ProfilePresenter: ProfilePresenterProtocol {
+    
     func viewDidLoad() {
-        
+        view.updateTitle("Profile")
     }
     
     
