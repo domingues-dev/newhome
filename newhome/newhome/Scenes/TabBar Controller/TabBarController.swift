@@ -13,9 +13,9 @@ class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBar.backgroundColor = .white
-        tabBar.tintColor = UIColor(named: "blue")
-        navigationController?.navigationBar.backgroundColor = .white
+        tabBar.backgroundColor = AppColors.white
+        tabBar.tintColor = AppColors.blue
+        navigationController?.navigationBar.backgroundColor = AppColors.white
         tabBar.isTranslucent = false
         setViewControllers(
             [

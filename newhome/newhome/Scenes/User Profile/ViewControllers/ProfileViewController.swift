@@ -47,7 +47,7 @@ class ProfileViewController: UIViewController {
     lazy var cameraButton: UIButton = {
        let cb = UIButton()
         cb.addTarget(self, action: #selector(cameraButtonClicked(_:)), for: .touchUpInside)
-        cb.backgroundColor = UIColor(named: "light-blue")
+        cb.backgroundColor = AppColors.lightBlue
         cb.setImage(UIImage(named: "camera-icon"), for: .normal)
         cb.layer.cornerRadius = Constants.buttonCornerRadius
         cb.layer.masksToBounds = true
@@ -58,7 +58,7 @@ class ProfileViewController: UIViewController {
     lazy var settings: UIButton = {
        let cb = UIButton()
         cb.addTarget(self, action: #selector(settingsButtonClicked(_:)), for: .touchUpInside)
-        cb.backgroundColor = UIColor(named: "light-blue")
+        cb.backgroundColor = AppColors.lightBlue
         cb.setImage(UIImage(named: "settings-icon"), for: .normal)
         cb.layer.cornerRadius = Constants.buttonCornerRadius
         cb.translatesAutoresizingMaskIntoConstraints = false
@@ -70,7 +70,7 @@ class ProfileViewController: UIViewController {
         piv.image = UIImage(named: "profile-icon")
         piv.layer.cornerRadius = (Constants.profileImageSize ) / 2
         piv.layer.borderWidth = Constants.profileImageBorderWidth
-        piv.layer.borderColor = UIColor(named: "blue")?.cgColor
+        piv.layer.borderColor = AppColors.blue.cgColor
         piv.layer.masksToBounds = true
         return piv
     }()
@@ -78,7 +78,7 @@ class ProfileViewController: UIViewController {
     lazy var profileName: UILabel = {
        let pn = UILabel()
         pn.text = "Matt Cummings"
-        pn.textColor = UIColor(named: "dark-blue")
+        pn.textColor = AppColors.darkBlue
         pn.font = UIFont(name: "Lato-Bold", size: 20)
         return pn
     }()
@@ -104,7 +104,7 @@ class ProfileViewController: UIViewController {
         cb.titleEdgeInsets = UIEdgeInsets(top: 0, left: -75, bottom: 0, right: 0)
         cb.layer.cornerRadius = Constants.buttonCornerRadius
         cb.layer.masksToBounds = true
-        cb.backgroundColor = UIColor(named: "blue")
+        cb.backgroundColor = AppColors.blue
         cb.clipsToBounds = true
         cb.translatesAutoresizingMaskIntoConstraints = false
         return cb
@@ -113,16 +113,16 @@ class ProfileViewController: UIViewController {
     lazy var addressButton: UIButton = {
        let cb = UIButton()
         cb.addTarget(self, action: #selector(addressButtonClicked(_:)), for: .touchUpInside)
-        cb.setTitleColor(UIColor(named: "blue"), for: .normal)
+        cb.setTitleColor(AppColors.blue, for: .normal)
         cb.setImage(UIImage(named: "address-icon"), for: .normal)
-        cb.tintColor = UIColor(named: "blue")
+        cb.tintColor = AppColors.blue
         cb.setAttributedTitle(NSAttributedString(string: "Address Book", attributes: [NSAttributedString.Key.font: UIFont(name: "Lato", size: 20)!]), for: .normal)
         cb.imageEdgeInsets = UIEdgeInsets(top: 0, left: -150, bottom: 0, right: 0)
         cb.titleEdgeInsets = UIEdgeInsets(top: 0, left: -75, bottom: 0, right: 0)
         cb.clipsToBounds = true
         cb.layer.cornerRadius = Constants.buttonCornerRadius
         cb.layer.masksToBounds = true
-        cb.backgroundColor = UIColor(named: "light-grey")
+        cb.backgroundColor = AppColors.lightGrey
         cb.translatesAutoresizingMaskIntoConstraints = false
         return cb
     }()
@@ -130,15 +130,15 @@ class ProfileViewController: UIViewController {
     lazy var walletButton: UIButton = {
        let cb = UIButton()
         cb.addTarget(self, action: #selector(walletButtonClicked(_:)), for: .touchUpInside)
-        cb.setTitleColor(UIColor(named: "blue"), for: .normal)
+        cb.setTitleColor(AppColors.blue, for: .normal)
         cb.setImage(UIImage(named: "wallet-icon"), for: .normal)
-        cb.tintColor = UIColor(named: "blue")
+        cb.tintColor = AppColors.blue
         cb.setAttributedTitle(NSAttributedString(string: "My Wallet", attributes: [NSAttributedString.Key.font: UIFont(name: "Lato", size: 20)!]), for: .normal)
         cb.imageEdgeInsets = UIEdgeInsets(top: 0, left: -175, bottom: 0, right: 0)
         cb.titleEdgeInsets = UIEdgeInsets(top: 0, left: -100, bottom: 0, right: 0)
         cb.layer.cornerRadius = Constants.buttonCornerRadius
         cb.layer.masksToBounds = true
-        cb.backgroundColor = UIColor(named: "light-grey")
+        cb.backgroundColor = AppColors.lightGrey
         cb.clipsToBounds = true
         cb.translatesAutoresizingMaskIntoConstraints = false
         return cb
@@ -156,7 +156,7 @@ class ProfileViewController: UIViewController {
     lazy var signoutButton: UIButton = {
         let sb = UIButton()
         sb.setImage(UIImage(named: "signout-icon"), for: .normal)
-        sb.backgroundColor = UIColor(named: "dark-blue")
+        sb.backgroundColor = AppColors.darkBlue
         sb.layer.cornerRadius = Constants.buttonCornerRadius
         sb.clipsToBounds = true
         sb.addTarget(self, action: #selector(signoutButtonClicked(_:)), for: .touchUpInside)
@@ -179,7 +179,7 @@ class ProfileViewController: UIViewController {
         addButtonsStackView()
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "cart-icon"), style: .plain, target: self, action: #selector(cartButtonClicked(_:)))
-        navigationItem.rightBarButtonItem?.tintColor = UIColor(named: "dark-blue")
+        navigationItem.rightBarButtonItem?.tintColor = AppColors.darkBlue
         setupLayoutProfileViews()
     }
     

@@ -19,6 +19,7 @@
 		848E0A02261D508500FE538A /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 848E09F7261D508500FE538A /* Lato-Regular.ttf */; };
 		848E0A03261D508500FE538A /* Lato-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 848E09F8261D508500FE538A /* Lato-ThinItalic.ttf */; };
 		848E0A0B261D577300FE538A /* NotificationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E0A0A261D577300FE538A /* NotificationButton.swift */; };
+		848E0A11261F46A300FE538A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E0A10261F46A300FE538A /* Colors.swift */; };
 		84AA56BD261D204A00C4835A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA56BC261D204A00C4835A /* AppDelegate.swift */; };
 		84AA56C6261D204B00C4835A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84AA56C5261D204B00C4835A /* Assets.xcassets */; };
 		84AA56C9261D204B00C4835A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84AA56C7261D204B00C4835A /* LaunchScreen.storyboard */; };
@@ -48,6 +49,7 @@
 		848E09F7261D508500FE538A /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		848E09F8261D508500FE538A /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
 		848E0A0A261D577300FE538A /* NotificationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationButton.swift; sourceTree = "<group>"; };
+		848E0A10261F46A300FE538A /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		84AA56B9261D204A00C4835A /* newhome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newhome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84AA56BC261D204A00C4835A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84AA56C5261D204B00C4835A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -112,6 +114,14 @@
 				848E0A0A261D577300FE538A /* NotificationButton.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		848E0A0F261F467700FE538A /* Global Constants */ = {
+			isa = PBXGroup;
+			children = (
+				848E0A10261F46A300FE538A /* Colors.swift */,
+			);
+			path = "Global Constants";
 			sourceTree = "<group>";
 		};
 		84AA56B0261D204A00C4835A = {
@@ -361,6 +371,7 @@
 		84AA5715261D3BFD00C4835A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				848E0A0F261F467700FE538A /* Global Constants */,
 				848E0A09261D575A00FE538A /* Views */,
 				84AA5716261D3C0400C4835A /* Base View Controllers */,
 			);
@@ -464,6 +475,7 @@
 				84AA5702261D297900C4835A /* MapViewController.swift in Sources */,
 				848E0A0B261D577300FE538A /* NotificationButton.swift in Sources */,
 				84AA570E261D329F00C4835A /* ProfilePresenter.swift in Sources */,
+				848E0A11261F46A300FE538A /* Colors.swift in Sources */,
 				84AA5718261D3C1B00C4835A /* BaseNavigationController.swift in Sources */,
 				84AA5708261D29D400C4835A /* ProfileViewController.swift in Sources */,
 				84AA56BD261D204A00C4835A /* AppDelegate.swift in Sources */,

@@ -17,12 +17,12 @@ class BaseNavigationController: UINavigationController {
         
         navigationBar.titleTextAttributes = [
             .font: UIFont.boldSystemFont(ofSize: 16),
-            .foregroundColor: UIColor(named: "dark-blue") ?? UIColor.black
+            .foregroundColor: AppColors.darkBlue
         ]
         
         navigationBar.largeTitleTextAttributes = [
             .font: UIFont(name: "Lato-Bold", size: 36) ?? UIFont.boldSystemFont(ofSize: 36),
-            .foregroundColor: UIColor(named: "dark-blue") ?? UIColor.black
+            .foregroundColor: AppColors.darkBlue
         ]
     }
 }
