@@ -31,25 +31,25 @@ class TabBarController: UITabBarController {
     
     private func configureHomeViewController() -> UIViewController {
         let homeViewController = HomeViewController()
-        homeViewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "home-icon"), tag: 0)
+        homeViewController.tabBarItem = UITabBarItem(title: nil, image: AppTabBarIcons.homeIcon, tag: 0)
         return homeViewController
     }
     
     private func configureCategoryViewController() -> UIViewController {
         let categoryViewController = CategoryViewController()
-        categoryViewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "category-icon"), tag: 1)
+        categoryViewController.tabBarItem = UITabBarItem(title: nil, image: AppTabBarIcons.categoryIcon, tag: 1)
         return categoryViewController
     }
     
     private func configureSavedViewController() -> UIViewController {
         let savedViewController = SavedViewController()
-        savedViewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "saved-icon"), tag: 2)
+        savedViewController.tabBarItem = UITabBarItem(title: nil, image: AppTabBarIcons.likedIcon, tag: 2)
         return savedViewController
     }
     
     private func configureMapViewController() -> UIViewController {
         let mapViewController = MapViewController()
-        mapViewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "map-icon"), tag: 3)
+        mapViewController.tabBarItem = UITabBarItem(title: nil, image: AppTabBarIcons.mapIcon, tag: 3)
         return mapViewController
     }
     
@@ -59,7 +59,7 @@ class TabBarController: UITabBarController {
         let profilePresenter = ProfilePresenter(view: profileViewController, interactor: profileIntercator)
         profileViewController.presenter = profilePresenter
         
-        profileViewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "profile-icon"), tag: 4)
+        profileViewController.tabBarItem = UITabBarItem(title: nil, image: AppTabBarIcons.profileIcon, tag: 4)
         return BaseNavigationController(rootViewController: profileViewController)
     }
     

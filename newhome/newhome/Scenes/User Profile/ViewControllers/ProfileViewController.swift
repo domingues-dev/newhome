@@ -48,7 +48,7 @@ class ProfileViewController: UIViewController {
        let cb = UIButton()
         cb.addTarget(self, action: #selector(cameraButtonClicked(_:)), for: .touchUpInside)
         cb.backgroundColor = AppColors.lightBlue
-        cb.setImage(UIImage(named: "camera-icon"), for: .normal)
+        cb.setImage(AppProfileIcons.cameraIcon, for: .normal)
         cb.layer.cornerRadius = Constants.buttonCornerRadius
         cb.layer.masksToBounds = true
         cb.translatesAutoresizingMaskIntoConstraints = false
@@ -59,7 +59,7 @@ class ProfileViewController: UIViewController {
        let cb = UIButton()
         cb.addTarget(self, action: #selector(settingsButtonClicked(_:)), for: .touchUpInside)
         cb.backgroundColor = AppColors.lightBlue
-        cb.setImage(UIImage(named: "settings-icon"), for: .normal)
+        cb.setImage(AppProfileIcons.settingsIcon, for: .normal)
         cb.layer.cornerRadius = Constants.buttonCornerRadius
         cb.translatesAutoresizingMaskIntoConstraints = false
         return cb
@@ -67,7 +67,7 @@ class ProfileViewController: UIViewController {
     
     lazy var profileImageView: UIImageView = {
         let piv = UIImageView()
-        piv.image = UIImage(named: "profile-icon")
+        piv.image = AppTabBarIcons.profileIcon
         piv.layer.cornerRadius = (Constants.profileImageSize ) / 2
         piv.layer.borderWidth = Constants.profileImageBorderWidth
         piv.layer.borderColor = AppColors.blue.cgColor
@@ -97,7 +97,7 @@ class ProfileViewController: UIViewController {
        let cb = UIButton()
         cb.addTarget(self, action: #selector(purchaseButtonClicked(_:)), for: .touchUpInside)
         cb.setTitleColor(.white, for: .normal)
-        cb.setImage(UIImage(named: "purchase-icon"), for: .normal)
+        cb.setImage(AppProfileIcons.purchaseIcon, for: .normal)
         cb.tintColor = UIColor.white
         cb.setAttributedTitle(NSAttributedString(string: "My purchases", attributes: [NSAttributedString.Key.font: UIFont(name: "Lato", size: 20)!]), for: .normal)
         cb.imageEdgeInsets = UIEdgeInsets(top: 0, left: -150, bottom: 0, right: 0)
@@ -114,7 +114,7 @@ class ProfileViewController: UIViewController {
        let cb = UIButton()
         cb.addTarget(self, action: #selector(addressButtonClicked(_:)), for: .touchUpInside)
         cb.setTitleColor(AppColors.blue, for: .normal)
-        cb.setImage(UIImage(named: "address-icon"), for: .normal)
+        cb.setImage(AppProfileIcons.addressIcon, for: .normal)
         cb.tintColor = AppColors.blue
         cb.setAttributedTitle(NSAttributedString(string: "Address Book", attributes: [NSAttributedString.Key.font: UIFont(name: "Lato", size: 20)!]), for: .normal)
         cb.imageEdgeInsets = UIEdgeInsets(top: 0, left: -150, bottom: 0, right: 0)
@@ -131,7 +131,7 @@ class ProfileViewController: UIViewController {
        let cb = UIButton()
         cb.addTarget(self, action: #selector(walletButtonClicked(_:)), for: .touchUpInside)
         cb.setTitleColor(AppColors.blue, for: .normal)
-        cb.setImage(UIImage(named: "wallet-icon"), for: .normal)
+        cb.setImage(AppProfileIcons.walletIcon, for: .normal)
         cb.tintColor = AppColors.blue
         cb.setAttributedTitle(NSAttributedString(string: "My Wallet", attributes: [NSAttributedString.Key.font: UIFont(name: "Lato", size: 20)!]), for: .normal)
         cb.imageEdgeInsets = UIEdgeInsets(top: 0, left: -175, bottom: 0, right: 0)
@@ -155,7 +155,7 @@ class ProfileViewController: UIViewController {
     
     lazy var signoutButton: UIButton = {
         let sb = UIButton()
-        sb.setImage(UIImage(named: "signout-icon"), for: .normal)
+        sb.setImage(AppProfileIcons.signoutIcon, for: .normal)
         sb.backgroundColor = AppColors.darkBlue
         sb.layer.cornerRadius = Constants.buttonCornerRadius
         sb.clipsToBounds = true
@@ -178,7 +178,7 @@ class ProfileViewController: UIViewController {
         addProfileStackView()
         addButtonsStackView()
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "cart-icon"), style: .plain, target: self, action: #selector(cartButtonClicked(_:)))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: AppProfileIcons.cartIcon, style: .plain, target: self, action: #selector(cartButtonClicked(_:)))
         navigationItem.rightBarButtonItem?.tintColor = AppColors.darkBlue
         setupLayoutProfileViews()
     }

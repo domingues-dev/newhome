@@ -20,6 +20,7 @@
 		848E0A03261D508500FE538A /* Lato-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 848E09F8261D508500FE538A /* Lato-ThinItalic.ttf */; };
 		848E0A0B261D577300FE538A /* NotificationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E0A0A261D577300FE538A /* NotificationButton.swift */; };
 		848E0A11261F46A300FE538A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E0A10261F46A300FE538A /* Colors.swift */; };
+		848E0A15261F4A4700FE538A /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E0A14261F4A4700FE538A /* Icons.swift */; };
 		84AA56BD261D204A00C4835A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA56BC261D204A00C4835A /* AppDelegate.swift */; };
 		84AA56C6261D204B00C4835A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84AA56C5261D204B00C4835A /* Assets.xcassets */; };
 		84AA56C9261D204B00C4835A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84AA56C7261D204B00C4835A /* LaunchScreen.storyboard */; };
@@ -50,6 +51,7 @@
 		848E09F8261D508500FE538A /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
 		848E0A0A261D577300FE538A /* NotificationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationButton.swift; sourceTree = "<group>"; };
 		848E0A10261F46A300FE538A /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		848E0A14261F4A4700FE538A /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		84AA56B9261D204A00C4835A /* newhome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newhome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84AA56BC261D204A00C4835A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84AA56C5261D204B00C4835A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				848E0A10261F46A300FE538A /* Colors.swift */,
+				848E0A14261F4A4700FE538A /* Icons.swift */,
 			);
 			path = "Global Constants";
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				848E0A15261F4A4700FE538A /* Icons.swift in Sources */,
 				84AA56FF261D292F00C4835A /* CategoryViewController.swift in Sources */,
 				84AA570B261D31D900C4835A /* Profile.swift in Sources */,
 				84AA5711261D32CA00C4835A /* ProfileInteractor.swift in Sources */,
