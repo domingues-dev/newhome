@@ -42,7 +42,7 @@ class TabBarController: UITabBarController {
     }
     
     private func configureSavedViewController() -> UIViewController {
-        let savedViewController = SavedViewController()
+        let savedViewController = FavoriteItemsViewController()
         savedViewController.tabBarItem = UITabBarItem(title: nil, image: AppTabBarIcons.likedIcon, tag: 2)
         return savedViewController
     }

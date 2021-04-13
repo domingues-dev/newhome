@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SavedViewController: UIViewController {
+class FavoriteItemsViewController: UIViewController {
     
     // MARK: - Initialization
     
