@@ -22,6 +22,12 @@ class ProfileViewController: UIViewController {
         return cv
     }()
     
+    var buttonsProperties: [ButtonProperties] = [
+        ButtonProperties(image: AppProfileIcons.purchaseIcon, name: "My Purchases"),
+        ButtonProperties(image: AppProfileIcons.addressIcon, name: "Addresses Book"),
+        ButtonProperties(image: AppProfileIcons.walletIcon, name: "My Wallet")
+    ]
+    
      //MARK - Initialization
     
     override func viewDidLoad() {
@@ -37,7 +43,7 @@ class ProfileViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         ProfilePictureCollectionViewCell.register(in: collectionView)
-        PurchaseButtonCollectionViewCell.register(in: collectionView)
+        ButtonCollectionViewCell.register(in: collectionView)
         AddressButtonCollectionViewCell.register(in: collectionView)
         WalletButtonCollectionViewCell.register(in: collectionView)
         SignoutButtonCollectionViewCell.register(in: collectionView)
@@ -98,26 +104,19 @@ extension ProfileViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
        
         let profilePictureCell = ProfilePictureCollectionViewCell.dequeue(from: collectionView, for: indexPath)
-        let purchaseButtonCell = PurchaseButtonCollectionViewCell.dequeue(from: collectionView, for: indexPath)
-        let addressButtonCell = AddressButtonCollectionViewCell.dequeue(from: collectionView, for: indexPath)
-        let walletButtonCell = WalletButtonCollectionViewCell.dequeue(from: collectionView, for: indexPath)
+        let buttonCell = ButtonCollectionViewCell.dequeue(from: collectionView, for: indexPath)
         let signoutButtonCell = SignoutButtonCollectionViewCell.dequeue(from: collectionView, for: indexPath)
-        
         switch indexPath.section {
         case 1:
-            switch indexPath.item {
-            case 0:
-                return purchaseButtonCell
-            case 1:
-                return addressButtonCell
-            case 2:
-                return walletButtonCell
-            default:
+            if (indexPath.item < 3) {
+                buttonCell.buttonProperties = buttonsProperties[indexPath.item]
+            } else {
                 return signoutButtonCell
             }
+            
+            return buttonCell
         default:
             return profilePictureCell
-        
         }
     }
     

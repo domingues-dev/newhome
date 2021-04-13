@@ -39,7 +39,6 @@ class ProfileButtonView: UIControl {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = AppColors.lightGrey
         layer.cornerRadius = cornerRadius
         setupSubViews()
         setupSubViewsLayouts()
@@ -51,6 +50,10 @@ class ProfileButtonView: UIControl {
         stackView.addArrangedSubview(icon)
         stackView.addArrangedSubview(label)
         icon.iconImageView.tintColor = AppColors.blue
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapGestures(_:)))
+        addGestureRecognizer(tapGestureRecognizer)
+        
     }
     
     fileprivate func setupSubViewsLayouts() {
@@ -66,6 +69,11 @@ class ProfileButtonView: UIControl {
             icon.heightAnchor.constraint(equalToConstant: iconWidth)
         ])
     }
+    
+    @objc func handleTapGestures(_ sender: Any) {
+        sendActions(for: .touchUpInside)
+    }
+    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

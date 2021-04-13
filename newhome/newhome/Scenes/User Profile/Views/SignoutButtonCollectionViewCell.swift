@@ -28,7 +28,7 @@ class SignoutButtonCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(signoutButton)
-
+        signoutButton.addTarget(self, action: #selector(clicked(_:)), for: .touchUpInside)
         NSLayoutConstraint.activate([
             signoutButton.topAnchor.constraint(equalTo: self.topAnchor),
             signoutButton.bottomAnchor.constraint(equalTo: self.bottomAnchor),
@@ -37,5 +37,7 @@ class SignoutButtonCollectionViewCell: UICollectionViewCell {
         ])
     }
 
-    
+    @objc func clicked(_ sender: Any?) {
+        print(123)
+    }
 }

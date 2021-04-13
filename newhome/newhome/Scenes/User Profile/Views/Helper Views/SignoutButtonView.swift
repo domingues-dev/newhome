@@ -39,7 +39,6 @@ class SignoutButtonView: UIControl {
         return l
     }()
     
-    
     fileprivate func setupSubViews() {
         
         backgroundColor = AppColors.white
@@ -47,7 +46,8 @@ class SignoutButtonView: UIControl {
         addSubview(stackView)
         stackView.addArrangedSubview(icon)
         stackView.addArrangedSubview(label)
-        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(onTouchUpInside))
+        addGestureRecognizer(tapGesture)
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: self.topAnchor),
             stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
@@ -58,6 +58,10 @@ class SignoutButtonView: UIControl {
         NSLayoutConstraint.activate([
             icon.widthAnchor.constraint(equalToConstant: iconWidth)
         ])
+    }
+    
+    @objc func onTouchUpInside(_ sender: Any) {
+        sendActions(for: .touchUpInside)
     }
     
     override init(frame: CGRect) {

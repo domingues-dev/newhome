@@ -18,7 +18,7 @@ class ProfilePictureCollectionViewCell: UICollectionViewCell {
         static let stackViewSpacing:CGFloat = 20
         static let profileImageButtonsSize: CGFloat = 40
         static let fontSize: CGFloat = 20
-        static let profileImageCornerRadius: CGFloat = 60
+        static let profileImageCornerRadius: CGFloat = 45
     }
     
     lazy var profileVStackView: UIStackView = {
