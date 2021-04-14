@@ -17,9 +17,11 @@ extension UICollectionViewCell {
         collectionView.register(self, forCellWithReuseIdentifier: reuseIdentifier)
     }
 
+    // swiftlint:disable force_cast
     static func dequeue(from collectionView: UICollectionView, for indexPath: IndexPath) -> Self {
         return collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,
                                                   for: indexPath) as! Self
     }
+    // swiftlint:enable force_cast
     
 }
