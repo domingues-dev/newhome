@@ -93,3 +93,11 @@ type_name:
 line_length:
     ignores_comments: true
     ignores_function_declarations: true
+
+custom_rules:
+    tip:
+        regex: "([Tt]ip)"
+        message: "This is a tip"
+        match_kinds:
+          - comment
+        severity: warning
