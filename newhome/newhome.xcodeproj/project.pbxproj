@@ -30,7 +30,6 @@
 		84AA56C6261D204B00C4835A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84AA56C5261D204B00C4835A /* Assets.xcassets */; };
 		84AA56C9261D204B00C4835A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84AA56C7261D204B00C4835A /* LaunchScreen.storyboard */; };
 		84AA56DC261D268F00C4835A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA56DB261D268F00C4835A /* TabBarController.swift */; };
-		84AA56EE261D282E00C4835A /* Presenters in Resources */ = {isa = PBXBuildFile; fileRef = 84AA56ED261D282E00C4835A /* Presenters */; };
 		84AA56FB261D28B500C4835A /* FavoriteItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA56FA261D28B500C4835A /* FavoriteItemsViewController.swift */; };
 		84AA56FF261D292F00C4835A /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA56FE261D292F00C4835A /* CategoryViewController.swift */; };
 		84AA5702261D297900C4835A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA5701261D297900C4835A /* MapViewController.swift */; };
@@ -72,7 +71,6 @@
 		84AA56C8261D204B00C4835A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84AA56CA261D204B00C4835A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84AA56DB261D268F00C4835A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		84AA56ED261D282E00C4835A /* Presenters */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Presenters; sourceTree = "<group>"; };
 		84AA56FA261D28B500C4835A /* FavoriteItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteItemsViewController.swift; sourceTree = "<group>"; };
 		84AA56FE261D292F00C4835A /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		84AA5701261D297900C4835A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +115,13 @@
 				840F2E122623465B00474348 /* IconImageView.swift */,
 			);
 			path = "Helper Views";
+			sourceTree = "<group>";
+		};
+		840F2E422626E68100474348 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenters;
 			sourceTree = "<group>";
 		};
 		8426AB1A2620ED2F00387914 /* Extensions */ = {
@@ -221,7 +226,7 @@
 		84AA56D6261D258F00C4835A /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				84AA56ED261D282E00C4835A /* Presenters */,
+				840F2E422626E68100474348 /* Presenters */,
 				84AA56EA261D278800C4835A /* Views */,
 				84AA56E8261D277A00C4835A /* Interactors */,
 				84AA56E3261D272000C4835A /* ViewControllers */,
@@ -502,7 +507,6 @@
 				84AA56C6261D204B00C4835A /* Assets.xcassets in Resources */,
 				848E09FA261D508500FE538A /* Lato-Light.ttf in Resources */,
 				848E0A02261D508500FE538A /* Lato-Regular.ttf in Resources */,
-				84AA56EE261D282E00C4835A /* Presenters in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

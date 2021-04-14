@@ -44,8 +44,6 @@ class ProfileViewController: UIViewController {
         collectionView.dataSource = self
         ProfilePictureCollectionViewCell.register(in: collectionView)
         ButtonCollectionViewCell.register(in: collectionView)
-        AddressButtonCollectionViewCell.register(in: collectionView)
-        WalletButtonCollectionViewCell.register(in: collectionView)
         SignoutButtonCollectionViewCell.register(in: collectionView)
     }
     

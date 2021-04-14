@@ -58,7 +58,6 @@ class ButtonCollectionViewCell: UICollectionViewCell {
             button.label.textColor = AppColors.blue
         }
     }
-
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
