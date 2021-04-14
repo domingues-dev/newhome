@@ -26,6 +26,17 @@ class ProfilePresenter {
 //MARK: - ProfileBusinessPresenter
 
 extension ProfilePresenter: ProfileBusinessPresenter {
+    func didGetAuthButtons(_ buttons: [AuthButton]) {
+        view.updateView(with: buttons)
+    }
+    
+    func didGetButtons(_ buttons: [Button]) {
+        view.updateView(with: buttons)
+    }
+    
+    func didFetchUsers(_ user: [UserEntry]) {
+        view.updateView(with: user)
+    }
     
 }
 
@@ -35,6 +46,9 @@ extension ProfilePresenter: ProfilePresenterProtocol {
     
     func viewDidLoad() {
         view.updateTitle("Profile")
+        interactor.fetchUser()
+        interactor.getButtons()
+        interactor.getAuthButtons()
     }
     
     

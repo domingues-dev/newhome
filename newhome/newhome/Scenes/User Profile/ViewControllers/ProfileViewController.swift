@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import IGListKit
 
 class ProfileViewController: UIViewController {
     
@@ -22,11 +23,6 @@ class ProfileViewController: UIViewController {
         return cv
     }()
     
-    var buttonsProperties: [ButtonProperties] = [
-        ButtonProperties(image: AppProfileIcons.purchaseIcon, name: "My Purchases"),
-        ButtonProperties(image: AppProfileIcons.addressIcon, name: "Addresses Book"),
-        ButtonProperties(image: AppProfileIcons.walletIcon, name: "My Wallet")
-    ]
     
      //MARK - Initialization
     
@@ -61,6 +57,18 @@ class ProfileViewController: UIViewController {
 //MARK - ProfileViewProtocol
 
 extension ProfileViewController: ProfileViewProtocol {
+    func updateView(with buttons: [AuthButton]) {
+        
+    }
+    
+    func updateView(with buttons: [Button]) {
+        
+    }
+    
+    func updateView(with users: [UserEntry]) {
+        
+    }
+    
     func isLoading(_ loading: Bool) {
         
     }
@@ -107,7 +115,6 @@ extension ProfileViewController: UICollectionViewDataSource {
         switch indexPath.section {
         case 1:
             if (indexPath.item < 3) {
-                buttonCell.buttonProperties = buttonsProperties[indexPath.item]
             } else {
                 return signoutButtonCell
             }

@@ -14,7 +14,7 @@ class ButtonCollectionViewCell: UICollectionViewCell {
     let fontSize: CGFloat = 20
     let buttonMargin: CGFloat = 20
     
-    var buttonProperties:  ButtonProperties? {
+    var buttonProperties:  Button? {
         didSet {
             button.icon.iconImageView.image = buttonProperties?.image
             button.label.text = buttonProperties?.name

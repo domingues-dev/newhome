@@ -7,7 +7,13 @@
 
 import UIKit
 
-struct ButtonProperties {
+class Button: NSObject {
     var image: UIImage
     var name: String
+    
+    init(name: String, image: UIImage) {
+        self.name = name
+        self.image = image
+    }
+    
 }

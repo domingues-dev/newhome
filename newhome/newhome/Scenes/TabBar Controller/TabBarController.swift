@@ -54,9 +54,10 @@ class TabBarController: UITabBarController {
     }
     
     private func configureProfileViewController() -> UIViewController {
-        let profileViewController = ProfileViewController()
+        let profileViewController = IGProfileViewController()
         let profileIntercator = ProfileInteractor()
         let profilePresenter = ProfilePresenter(view: profileViewController, interactor: profileIntercator)
+        profileIntercator.presenter = profilePresenter
         profileViewController.presenter = profilePresenter
         
         profileViewController.tabBarItem = UITabBarItem(title: nil, image: AppTabBarIcons.profileIcon, tag: 4)

@@ -12,7 +12,10 @@ class ProfileInteractor {
     
     //MARK: - Properties
     
-    private weak var presenter: ProfileBusinessPresenter!
+    weak var presenter: ProfileBusinessPresenter!
+    let userLoader = UserLoader()
+    let buttonGenerator = ButtonGenerator()
+    let authButtonGenerator = AuthButtonGenerator()
     
 }
 
@@ -20,5 +23,17 @@ class ProfileInteractor {
 //MARK: - ProfileBusinessInteractor
 
 extension ProfileInteractor: ProfileBusinessInteractor {
+    func getAuthButtons() {
+        self.presenter.didGetAuthButtons(authButtonGenerator.generateButtons())
+    }
+    
+    func getButtons() {
+        self.presenter.didGetButtons(buttonGenerator.generateButtons())
+    }
+    
+    func fetchUser() {
+        self.presenter.didFetchUsers(userLoader.loadUser())
+    }
+    
     
 }

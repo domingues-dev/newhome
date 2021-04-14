@@ -9,7 +9,7 @@ import UIKit
 
 enum AppTabBarIcons {
     
-    static var homeIcon: UIImage { UIImage(named: "category-icon")! }
+    static var homeIcon: UIImage { UIImage(named: "home-icon")! }
     static var categoryIcon: UIImage { UIImage(named: "category-icon")! }
     static var mapIcon: UIImage { UIImage(named: "map-icon")! }
     static var likedIcon: UIImage { UIImage(named: "liked-icon")! }
