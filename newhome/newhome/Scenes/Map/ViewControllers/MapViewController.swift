@@ -7,9 +7,9 @@
 
 import UIKit
 
-class MapViewController : UIViewController {
+class MapViewController: UIViewController {
     
-    //MARK - Initialization
+    // MARK: - Initialization
     
     override func viewDidLoad() {
         super.viewDidLoad()

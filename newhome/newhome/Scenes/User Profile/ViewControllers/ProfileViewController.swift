@@ -10,7 +10,7 @@ import IGListKit
 
 class ProfileViewController: UIViewController {
     
-    //MARK - Properties
+    // MARK: - Properties
     
     var presenter: ProfilePresenterProtocol!
     
@@ -23,8 +23,7 @@ class ProfileViewController: UIViewController {
         return cv
     }()
     
-    
-     //MARK - Initialization
+     // MARK: - Initialization
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,13 +47,13 @@ class ProfileViewController: UIViewController {
             collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
     }
 
 }
 
-//MARK - ProfileViewProtocol
+// MARK: - ProfileViewProtocol
 
 extension ProfileViewController: ProfileViewProtocol {
     func updateView(with buttons: [AuthButton]) {
@@ -78,7 +77,7 @@ extension ProfileViewController: ProfileViewProtocol {
     }
 }
 
-//MARK - UICollectionViewDelegateFlowLayout
+// MARK: - UICollectionViewDelegateFlowLayout
 
 extension ProfileViewController: UICollectionViewDelegateFlowLayout {
     
@@ -95,7 +94,7 @@ extension ProfileViewController: UICollectionViewDelegateFlowLayout {
 
 }
 
-//MARK - UICollectionViewDataSource
+// MARK: - UICollectionViewDataSource
 
 extension ProfileViewController: UICollectionViewDataSource {
     
@@ -114,7 +113,7 @@ extension ProfileViewController: UICollectionViewDataSource {
         let signoutButtonCell = SignoutButtonCollectionViewCell.dequeue(from: collectionView, for: indexPath)
         switch indexPath.section {
         case 1:
-            if (indexPath.item < 3) {
+            if indexPath.item < 3 {
             } else {
                 return signoutButtonCell
             }

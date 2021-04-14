@@ -9,7 +9,7 @@ import UIKit
 
 class ProfileButtonView: UIControl {
     
-    //MARK: - Properties
+    // MARK: - Properties
     
     let iconWidth: CGFloat = 75
     let stackViewSpacing: CGFloat = 50
@@ -35,7 +35,7 @@ class ProfileButtonView: UIControl {
         return l
     }()
     
-    //MARK: - Initialization
+    // MARK: - Initialization
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -73,7 +73,6 @@ class ProfileButtonView: UIControl {
     @objc func handleTapGestures(_ sender: Any) {
         sendActions(for: .touchUpInside)
     }
-    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

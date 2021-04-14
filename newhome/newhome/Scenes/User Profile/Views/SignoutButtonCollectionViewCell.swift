@@ -9,7 +9,7 @@ import UIKit
 
 class SignoutButtonCollectionViewCell: UICollectionViewCell {
     
-    //MARK: - Properties
+    // MARK: - Properties
     
     let buttonMargin: CGFloat = 20
     
@@ -19,7 +19,7 @@ class SignoutButtonCollectionViewCell: UICollectionViewCell {
         return sb
     }()
     
-    //MARK: - Initialization
+    // MARK: - Initialization
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -33,7 +33,7 @@ class SignoutButtonCollectionViewCell: UICollectionViewCell {
             signoutButton.topAnchor.constraint(equalTo: self.topAnchor),
             signoutButton.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             signoutButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: buttonMargin),
-            signoutButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -buttonMargin),
+            signoutButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -buttonMargin)
         ])
     }
 

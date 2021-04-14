@@ -9,7 +9,7 @@ import UIKit
 
 class SignoutButtonView: UIControl {
     
-    //MARK: - Properties
+    // MARK: - Properties
     
     let iconWidth: CGFloat = 75
     let stackViewSpacing: CGFloat = 50
@@ -35,7 +35,12 @@ class SignoutButtonView: UIControl {
     
     lazy var label: UILabel = {
         let l = UILabel()
-        l.attributedText = NSAttributedString(string: "Signout", attributes:[ NSAttributedString.Key.font: UIFont(name: "Lato-Bold", size: fontSize) ?? UIFont.boldSystemFont(ofSize: fontSize)])
+        l.attributedText = NSAttributedString(
+            string: "Signout",
+            attributes: [
+                NSAttributedString.Key.font: UIFont(
+                    name: "Lato-Bold",
+                    size: fontSize) ?? UIFont.boldSystemFont(ofSize: fontSize)])
         return l
     }()
     

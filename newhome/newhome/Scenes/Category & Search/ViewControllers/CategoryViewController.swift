@@ -9,7 +9,7 @@ import UIKit
 
 class CategoryViewController: UIViewController {
     
-    //MARK - Initialization
+    // MARK: - Initialization
     
     override func viewDidLoad() {
         super.viewDidLoad()

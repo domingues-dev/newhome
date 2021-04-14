@@ -7,15 +7,14 @@
 
 import UIKit
 
-
 class SquareButton: UIButton {
     
-    //MARK: - Properties
+    // MARK: - Properties
     
     let cornerRadius: CGFloat = 10
     let size: CGFloat = 40
     
-    //MARK: - Initialization
+    // MARK: - Initialization
     
     override init(frame: CGRect) {
         super.init(frame: frame)

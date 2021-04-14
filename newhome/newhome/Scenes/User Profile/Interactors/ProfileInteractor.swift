@@ -7,10 +7,9 @@
 
 import Foundation
 
-
 class ProfileInteractor {
     
-    //MARK: - Properties
+    // MARK: - Properties
     
     weak var presenter: ProfileBusinessPresenter!
     let userLoader = UserLoader()
@@ -19,8 +18,7 @@ class ProfileInteractor {
     
 }
 
-
-//MARK: - ProfileBusinessInteractor
+// MARK: - ProfileBusinessInteractor
 
 extension ProfileInteractor: ProfileBusinessInteractor {
     func getAuthButtons() {
@@ -34,6 +32,5 @@ extension ProfileInteractor: ProfileBusinessInteractor {
     func fetchUser() {
         self.presenter.didFetchUsers(userLoader.loadUser())
     }
-    
     
 }

@@ -10,7 +10,7 @@ import IGListKit
 
 class IGProfileViewController: UIViewController {
     
-    //MARK: - Properties
+    // MARK: - Properties
     
     var presenter: ProfilePresenterProtocol!
     var userLoader: UserLoader!
@@ -34,7 +34,7 @@ class IGProfileViewController: UIViewController {
             workingRangeSize: 0)
     }()
     
-    //MARK: - Initialization
+    // MARK: - Initialization
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +53,7 @@ class IGProfileViewController: UIViewController {
     }
 }
 
-//MARK: - ListAdapterDataSource
+// MARK: - ListAdapterDataSource
 
 extension IGProfileViewController: ListAdapterDataSource {
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
@@ -62,7 +62,6 @@ extension IGProfileViewController: ListAdapterDataSource {
         items += authButtons as [ListDiffable]
         return items
     }
-    
     
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
         if object is UserEntry {
@@ -80,7 +79,7 @@ extension IGProfileViewController: ListAdapterDataSource {
     
 }
 
-//MARK: - ProfileViewProtocol
+// MARK: - ProfileViewProtocol
 
 extension IGProfileViewController: ProfileViewProtocol {
     func updateView(with buttons: [AuthButton]) {
@@ -95,7 +94,6 @@ extension IGProfileViewController: ProfileViewProtocol {
         userEntries = users
     }
     
-    
     func isLoading(_ loading: Bool) {
         
     }
@@ -105,4 +103,3 @@ extension IGProfileViewController: ProfileViewProtocol {
     }
 
 }
-

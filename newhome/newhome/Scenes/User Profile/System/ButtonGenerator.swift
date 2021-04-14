@@ -21,5 +21,4 @@ class ButtonGenerator {
         return buttons
     }
     
-    
 }
