@@ -11,6 +11,7 @@ class ButtonCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Properties
     
+    /* Review: Constants like this should be inside an enum, or at least private */
     let fontSize: CGFloat = 20
     let buttonMargin: CGFloat = 20
     
