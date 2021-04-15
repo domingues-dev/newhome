@@ -9,13 +9,13 @@ import UIKit
 
 class ProfilePictureCollectionViewCell: UICollectionViewCell {
     
-    //MARK: - Properties
+    // MARK: - Properties
     
-    struct Constants  {
+    struct Constants {
         static let profileSize: CGFloat = 180
-        static let profileImageSize:CGFloat = 130
-        static let profileImageBorderWidth:CGFloat = 5
-        static let stackViewSpacing:CGFloat = 20
+        static let profileImageSize: CGFloat = 130
+        static let profileImageBorderWidth: CGFloat = 5
+        static let stackViewSpacing: CGFloat = 20
         static let profileImageButtonsSize: CGFloat = 40
         static let fontSize: CGFloat = 20
         static let profileImageCornerRadius: CGFloat = 45
@@ -29,7 +29,6 @@ class ProfilePictureCollectionViewCell: UICollectionViewCell {
         vsv.translatesAutoresizingMaskIntoConstraints = false
         return vsv
     }()
-    
     
     lazy var profileHStackView: UIStackView = {
         let hsv = UIStackView()
@@ -73,8 +72,7 @@ class ProfilePictureCollectionViewCell: UICollectionViewCell {
         return pn
     }()
     
-    
-    //MARK: - Initialization
+    // MARK: - Initialization
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -100,7 +98,7 @@ class ProfilePictureCollectionViewCell: UICollectionViewCell {
             profileVStackView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
             profileVStackView.heightAnchor.constraint(equalToConstant: Constants.profileSize),
             profileVStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            profileVStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            profileVStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor)
         ])
         
         NSLayoutConstraint.activate([
@@ -118,17 +116,13 @@ class ProfilePictureCollectionViewCell: UICollectionViewCell {
             settings.widthAnchor.constraint(equalToConstant: Constants.profileImageButtonsSize)
         ])
     }
-
     
-    //MARK: - Buttons Actions
-    
+    // MARK: - Buttons Actions
     
     @objc private func cameraButtonClicked(_ sender: Any) {
-        //TODO
     }
     
     @objc private func settingsButtonClicked(_ sender: Any) {
-        //TODO
     }
     
 }

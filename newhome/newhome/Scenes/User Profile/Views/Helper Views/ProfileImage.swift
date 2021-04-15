@@ -8,7 +8,6 @@
 import UIKit
 
 class ProfileImage: UIView {
-
     
     // MARK: - Properties
     
@@ -35,7 +34,7 @@ class ProfileImage: UIView {
             imageView.topAnchor.constraint(equalTo: self.topAnchor, constant: imageMargin),
             imageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -imageMargin),
             imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: imageMargin),
-            imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -imageMargin),
+            imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -imageMargin)
         ])
     }
     

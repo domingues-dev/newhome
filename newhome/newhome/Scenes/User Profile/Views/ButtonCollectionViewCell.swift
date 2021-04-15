@@ -9,12 +9,12 @@ import UIKit
 
 class ButtonCollectionViewCell: UICollectionViewCell {
     
-    //MARK: - Properties
+    // MARK: - Properties
     
     let fontSize: CGFloat = 20
     let buttonMargin: CGFloat = 20
     
-    var buttonProperties:  Button? {
+    var buttonProperties: Button? {
         didSet {
             button.icon.iconImageView.image = buttonProperties?.image
             button.label.text = buttonProperties?.name
@@ -30,8 +30,7 @@ class ButtonCollectionViewCell: UICollectionViewCell {
         return sb
     }()
     
-    //MARK: - Initialization
-    
+    // MARK: - Initialization
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -41,7 +40,7 @@ class ButtonCollectionViewCell: UICollectionViewCell {
             button.topAnchor.constraint(equalTo: self.topAnchor),
             button.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             button.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: buttonMargin),
-            button.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -buttonMargin),
+            button.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -buttonMargin)
 
         ])
     }

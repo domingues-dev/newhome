@@ -10,11 +10,11 @@ import IGListKit
 
 class ProfileButtonsSectionController: ListSectionController {
     
-    //MARK: - Properties
+    // MARK: - Properties
     
     var button: Button!
     
-    //MARK: - Initialization
+    // MARK: - Initialization
     
     override init() {
         super.init()
@@ -22,7 +22,7 @@ class ProfileButtonsSectionController: ListSectionController {
     }
 }
 
-//MARK: - Data Provider
+// MARK: - Data Provider
 
 extension ProfileButtonsSectionController {
     override func numberOfItems() -> Int {
@@ -52,4 +52,3 @@ extension ProfileButtonsSectionController {
         return cell
     }
 }
-

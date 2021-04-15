@@ -10,7 +10,7 @@ import IGListKit
 
 class ProfilePictureSectionController: ListSectionController {
     
-    //MARK: - Properties
+    // MARK: - Properties
     
     var entry: UserEntry!
     
@@ -20,7 +20,7 @@ class ProfilePictureSectionController: ListSectionController {
     }
 }
 
-//MARK: - Data Provider
+// MARK: - Data Provider
 
 extension ProfilePictureSectionController {
     
@@ -50,6 +50,5 @@ extension ProfilePictureSectionController {
         }
         return cell
     }
-    
     
 }

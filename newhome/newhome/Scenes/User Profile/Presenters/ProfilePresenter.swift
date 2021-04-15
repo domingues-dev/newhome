@@ -9,12 +9,12 @@ import Foundation
 
 class ProfilePresenter {
     
-    //MARK: - Properties
+    // MARK: - Properties
     
     private weak var view: ProfileViewProtocol!
     private var interactor: ProfileBusinessInteractor!
     
-    //MARK: - Initialization
+    // MARK: - Initialization
     
     init(view: ProfileViewProtocol, interactor: ProfileBusinessInteractor) {
         self.view = view
@@ -23,7 +23,7 @@ class ProfilePresenter {
     
 }
 
-//MARK: - ProfileBusinessPresenter
+// MARK: - ProfileBusinessPresenter
 
 extension ProfilePresenter: ProfileBusinessPresenter {
     func didGetAuthButtons(_ buttons: [AuthButton]) {
@@ -40,7 +40,7 @@ extension ProfilePresenter: ProfileBusinessPresenter {
     
 }
 
-//MARK: - ProfilePresenterProtocol
+// MARK: - ProfilePresenterProtocol
 
 extension ProfilePresenter: ProfilePresenterProtocol {
     
@@ -50,6 +50,5 @@ extension ProfilePresenter: ProfilePresenterProtocol {
         interactor.getButtons()
         interactor.getAuthButtons()
     }
-    
     
 }

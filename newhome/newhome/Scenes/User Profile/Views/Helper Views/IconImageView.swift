@@ -9,8 +9,7 @@ import UIKit
 
 class IconImageView: UIView {
     
-    
-    //MARK: - Properties
+    // MARK: - Properties
     
     let imageMargin: CGFloat = 20
     
@@ -20,7 +19,7 @@ class IconImageView: UIView {
         return icon
     }()
     
-    //MARK: - Initialization
+    // MARK: - Initialization
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,7 +29,7 @@ class IconImageView: UIView {
             iconImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: imageMargin),
             iconImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -imageMargin),
             iconImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: imageMargin),
-            iconImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -imageMargin),
+            iconImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -imageMargin)
         ])
     }
     
