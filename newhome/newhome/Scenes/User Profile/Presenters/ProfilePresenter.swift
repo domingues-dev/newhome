@@ -45,6 +45,7 @@ extension ProfilePresenter: ProfileBusinessPresenter {
 extension ProfilePresenter: ProfilePresenterProtocol {
     
     func viewDidLoad() {
+        /* Review: You should setup strings files localizations to not have hardcoded strings */
         view.updateTitle("Profile")
         interactor.fetchUser()
         interactor.getButtons()

@@ -38,9 +38,29 @@ extension AuthButtonsSectionController {
     }
     
     override func cellForItem(at index: Int) -> UICollectionViewCell {
+        /*
+         Review: you could create a similiar extension like you have to dequeue cells from collection view
+         */
         let cellClass: AnyClass =  SignoutButtonCollectionViewCell.self
         let cell = collectionContext!.dequeueReusableCell(of: cellClass, for: self, at: index)
         if let cell = cell as? SignoutButtonCollectionViewCell {
+            /*
+             Review: This is not nice.. view interior views should be private to not be accessible
+             like this. Cells should have the view model property so they can configure themselves
+             
+             Ex. cell.model = authButton
+             
+             and in the SignoutButtonCollectionViewCell.swift file:
+             
+             var model: AuthButton? {
+                didSet {
+                    if let viewModel = model {
+                        bindViewModel(model)
+                    }
+                }
+             }
+             
+             */
             cell.signoutButton.label.text = authButton.name
             cell.signoutButton.icon.iconImageView.image = authButton.image
         }

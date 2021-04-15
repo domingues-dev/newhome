@@ -58,6 +58,9 @@ class IGProfileViewController: UIViewController {
 extension IGProfileViewController: ListAdapterDataSource {
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
         var items: [ListDiffable] = userEntries
+        /* Review: Is not nice to make this cast.. ViewModels should conform to ListDiffable protocol
+         so they can define their own diffIdentifiers and isEqual functions
+         */
         items += buttons as [ListDiffable]
         items += authButtons as [ListDiffable]
         return items

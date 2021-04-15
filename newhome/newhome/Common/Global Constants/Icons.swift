@@ -4,6 +4,7 @@
 //
 //  Created by Nicolá Domingues on 08/04/2021.
 //
+// swiftlint:disable force_unwrapping
 
 import UIKit
 

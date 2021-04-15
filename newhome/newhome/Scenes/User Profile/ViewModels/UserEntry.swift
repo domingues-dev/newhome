@@ -7,6 +7,7 @@
 
 import UIKit
 
+/* Review: Would be nice to have ViewModel suffix here */
 class UserEntry: NSObject {
     let name: String
     let profileImage: UIImage

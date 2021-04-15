@@ -3,13 +3,12 @@ disabled_rules:
     - identifier_name
     - nesting
     - multiple_closures_with_trailing_closure
-opt-in-rules:
+opt_in_rules:
     - array_init
     - closure_end_indentation
     - closure_spacing
     - collection_alignment
     - control_statement
-    - containts_over_first_not_nil
     - empty_count
     - empty_string
     - first_where
@@ -26,21 +25,24 @@ opt-in-rules:
     - redundant_type_annotation
     - return_arrow_whitespace
     - sorted_first_last
-    - sorted_imports
     - statement_position
     - static_operator
     - untyped_error_in_catch
     - unused_enumerated
     - unused_optional_binding
     - vertical_parameter_alignment_on_call
-    - vertical_whitespace_closing_braces
     - yoda_condition
     - empty_enum_arguments
     - force_unwrapping
+    - convenience_type
+    - toggle_bool
+    - unneeded_parentheses_in_closure_argument
+    - empty_collection_literal
+    - contains_over_first_not_nil
 
-analyzer-rules:
+analyzer_rules:
     - unused_import
-    - unused_private_declaration
+    - unused_declaration
 
 included:
     - newhome
@@ -58,21 +60,16 @@ force_unwrapping: warning
 closure_end_indentation: warning
 closure_parameter_position: warning
 unneeded_parentheses_in_closure_argument: warning
-collection_alignment: warning
 closure_spacing: warning
 convenience_type: warning
-deployment_target: warning
 empty_collection_literal: warning
-empty_count: warning
 empty_parameters: warning
 empty_parentheses_with_trailing_closure: warning
 empty_string: warning
-overridden_super_call: warning
 redundant_void_return: warning
 toggle_bool: warning
 weak_delegate: warning
 vertical_parameter_alignment_on_call: warning
-indentation_width: warning
 
 large_tuple:
     warning: 4
@@ -95,9 +92,9 @@ line_length:
     ignores_function_declarations: true
 
 custom_rules:
-    tip:
-        regex: "([Tt]ip)"
-        message: "This is a tip"
+    review_needed:
+        regex: "([Rr]eview)"
+        message: "This should be improved"
         match_kinds:
           - comment
         severity: warning

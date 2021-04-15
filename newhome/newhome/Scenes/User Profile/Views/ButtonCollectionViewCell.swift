@@ -47,6 +47,27 @@ class ButtonCollectionViewCell: UICollectionViewCell {
     
     @objc func buttonClicked(_ sender: Any) {
         button.isSelected = !button.isSelected
+        /*
+         Review: you could override UIButton isSelected.. to reutilize the code
+         Something like this inside ProfileButtonView class
+         
+         override var isSelected: Bool {
+            didSet {
+                if isSelected {
+                    button.backgroundColor = AppColors.blue
+                    button.icon.iconImageView.tintColor = AppColors.white
+                    button.label.textColor = AppColors.white
+                } else {
+                    button.backgroundColor = AppColors.lightGrey
+                    button.icon.iconImageView.tintColor = AppColors.blue
+                    button.label.textColor = AppColors.blue
+                }
+            }
+         }
+         
+         I know that this is just for testing, but usually we don't want to make buttons selected..
+         We override the `isHighlighted` property instead to help the user know that we are interacting with the button
+         */
         if button.isSelected {
             button.backgroundColor = AppColors.blue
             button.icon.iconImageView.tintColor = AppColors.white

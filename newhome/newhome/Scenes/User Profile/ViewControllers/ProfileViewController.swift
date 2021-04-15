@@ -23,7 +23,7 @@ class ProfileViewController: UIViewController {
         return cv
     }()
     
-     // MARK: - Initialization
+    // MARK: - Initialization
     
     override func viewDidLoad() {
         super.viewDidLoad()

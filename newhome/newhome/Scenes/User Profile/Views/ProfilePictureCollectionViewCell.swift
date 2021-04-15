@@ -54,7 +54,7 @@ class ProfilePictureCollectionViewCell: UICollectionViewCell {
     }()
     
     lazy var profileImageView: ProfileImage = {
-       let piv = ProfileImage()
+        let piv = ProfileImage()
         piv.imageView.image = UIImage(named: "profile-picture")
         piv.imageView.layer.masksToBounds = true
         piv.imageView.layer.cornerRadius = Constants.profileImageCornerRadius

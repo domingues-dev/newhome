@@ -7,6 +7,7 @@
 
 import UIKit
 
+/* Review: Would be nice to have ViewModel suffix here */
 class Button: NSObject {
     var image: UIImage
     var name: String
