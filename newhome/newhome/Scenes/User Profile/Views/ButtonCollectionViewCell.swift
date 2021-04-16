@@ -11,11 +11,22 @@ class ButtonCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Properties
     
-    /* Review: Constants like this should be inside an enum, or at least private */
-    let fontSize: CGFloat = 20
-    let buttonMargin: CGFloat = 20
+    var model: ButtonViewModel? {
+        didSet {
+            guard let image = model?.image,
+                  let label = model?.name
+            else { return }
+            button.icon.iconImageView.image = image
+            button.label.text = label
+        }
+    }
     
-    var buttonProperties: Button? {
+    enum Constants {
+        static let fontSize: CGFloat = 20
+        static let buttonMargin: CGFloat = 20
+    }
+
+    var buttonProperties: ButtonViewModel? {
         didSet {
             button.icon.iconImageView.image = buttonProperties?.image
             button.label.text = buttonProperties?.name
@@ -25,7 +36,9 @@ class ButtonCollectionViewCell: UICollectionViewCell {
     lazy var button: ProfileButtonView = {
         let sb = ProfileButtonView()
         sb.translatesAutoresizingMaskIntoConstraints = false
-        sb.label.font = UIFont(name: "Lato-Bold", size: fontSize) ?? .boldSystemFont(ofSize: fontSize)
+        sb.label.font = UIFont(
+            name: "Lato-Bold",
+            size: Constants.fontSize) ?? .boldSystemFont(ofSize: Constants.fontSize)
         sb.label.textColor = AppColors.blue
         sb.backgroundColor = AppColors.lightGrey
         return sb
@@ -40,44 +53,14 @@ class ButtonCollectionViewCell: UICollectionViewCell {
         NSLayoutConstraint.activate([
             button.topAnchor.constraint(equalTo: self.topAnchor),
             button.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            button.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: buttonMargin),
-            button.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -buttonMargin)
+            button.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Constants.buttonMargin),
+            button.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -Constants.buttonMargin)
 
         ])
     }
     
     @objc func buttonClicked(_ sender: Any) {
-        button.isSelected = !button.isSelected
-        /*
-         Review: you could override UIButton isSelected.. to reutilize the code
-         Something like this inside ProfileButtonView class
-         
-         override var isSelected: Bool {
-            didSet {
-                if isSelected {
-                    button.backgroundColor = AppColors.blue
-                    button.icon.iconImageView.tintColor = AppColors.white
-                    button.label.textColor = AppColors.white
-                } else {
-                    button.backgroundColor = AppColors.lightGrey
-                    button.icon.iconImageView.tintColor = AppColors.blue
-                    button.label.textColor = AppColors.blue
-                }
-            }
-         }
-         
-         I know that this is just for testing, but usually we don't want to make buttons selected..
-         We override the `isHighlighted` property instead to help the user know that we are interacting with the button
-         */
-        if button.isSelected {
-            button.backgroundColor = AppColors.blue
-            button.icon.iconImageView.tintColor = AppColors.white
-            button.label.textColor = AppColors.white
-        } else {
-            button.backgroundColor = AppColors.lightGrey
-            button.icon.iconImageView.tintColor = AppColors.blue
-            button.label.textColor = AppColors.blue
-        }
+        button.isHighlighted.toggle()
     }
     
     required init?(coder: NSCoder) {

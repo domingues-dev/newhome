@@ -14,9 +14,9 @@ class IGProfileViewController: UIViewController {
     
     var presenter: ProfilePresenterProtocol!
     var userLoader: UserLoader!
-    var userEntries: [UserEntry] = []
-    var buttons: [Button] = []
-    var authButtons: [AuthButton] = []
+    var userEntries: [UserEntryViewModel] = []
+    var buttons: [ButtonViewModel] = []
+    var authButtons: [AuthButtonViewModel] = []
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -58,18 +58,15 @@ class IGProfileViewController: UIViewController {
 extension IGProfileViewController: ListAdapterDataSource {
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
         var items: [ListDiffable] = userEntries
-        /* Review: Is not nice to make this cast.. ViewModels should conform to ListDiffable protocol
-         so they can define their own diffIdentifiers and isEqual functions
-         */
-        items += buttons as [ListDiffable]
-        items += authButtons as [ListDiffable]
+        items += buttons
+        items += authButtons
         return items
     }
     
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
-        if object is UserEntry {
+        if object is UserEntryViewModel {
             return ProfilePictureSectionController()
-        } else if object is Button {
+        } else if object is ButtonViewModel {
             return ProfileButtonsSectionController()
         } else {
             return AuthButtonsSectionController()
@@ -85,15 +82,15 @@ extension IGProfileViewController: ListAdapterDataSource {
 // MARK: - ProfileViewProtocol
 
 extension IGProfileViewController: ProfileViewProtocol {
-    func updateView(with buttons: [AuthButton]) {
+    func updateView(with buttons: [AuthButtonViewModel]) {
         authButtons = buttons
     }
     
-    func updateView(with buttons: [Button]) {
+    func updateView(with buttons: [ButtonViewModel]) {
         self.buttons = buttons
     }
     
-    func updateView(with users: [UserEntry]) {
+    func updateView(with users: [UserEntryViewModel]) {
         userEntries = users
     }
     

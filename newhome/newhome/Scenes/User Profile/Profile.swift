@@ -11,9 +11,9 @@ import Foundation
 protocol ProfileViewProtocol: class {
     func isLoading(_ loading: Bool)
     func updateTitle(_ title: String)
-    func updateView(with users: [UserEntry])
-    func updateView(with buttons: [Button])
-    func updateView(with buttons: [AuthButton])
+    func updateView(with users: [UserEntryViewModel])
+    func updateView(with buttons: [ButtonViewModel])
+    func updateView(with buttons: [AuthButtonViewModel])
 
 }
 
@@ -31,7 +31,7 @@ protocol ProfileBusinessInteractor: class {
 
 // Communication from interactor to presenter
 protocol ProfileBusinessPresenter: class {
-    func didFetchUsers(_ user: [UserEntry])
-    func didGetButtons(_ buttons: [Button])
-    func didGetAuthButtons(_ buttons: [AuthButton])
+    func didFetchUsers(_ user: [UserEntryViewModel])
+    func didGetButtons(_ buttons: [ButtonViewModel])
+    func didGetAuthButtons(_ buttons: [AuthButtonViewModel])
 }

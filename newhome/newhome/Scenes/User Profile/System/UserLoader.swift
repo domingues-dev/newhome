@@ -9,14 +9,14 @@ import UIKit
 
 class UserLoader {
     
-    var entries: [UserEntry] = []
+    var entries: [UserEntryViewModel] = []
     
-    func loadUser() -> [UserEntry] {
+    func loadUser() -> [UserEntryViewModel] {
         guard let profileImage = UIImage(named: "profile-picture") else {
             return []
         }
         let entries = [
-            UserEntry(name: "Matt Cummings", profileImage: profileImage)
+            UserEntryViewModel(name: "Matt Cummings", profileImage: profileImage)
         ]
         return entries
     }

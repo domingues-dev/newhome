@@ -11,21 +11,37 @@ class ProfileButtonView: UIControl {
     
     // MARK: - Properties
     
-    let iconWidth: CGFloat = 75
-    let stackViewSpacing: CGFloat = 50
-    let cornerRadius: CGFloat = 10
+    override var isHighlighted: Bool {
+       didSet {
+           if  isHighlighted {
+               backgroundColor = AppColors.blue
+               icon.iconImageView.tintColor = AppColors.white
+               label.textColor = AppColors.white
+           } else {
+               backgroundColor = AppColors.lightGrey
+               icon.iconImageView.tintColor = AppColors.blue
+               label.textColor = AppColors.blue
+           }
+       }
+    }
+    
+    enum Constants {
+        static let iconWidth: CGFloat = 75
+        static let stackViewSpacing: CGFloat = 50
+        static let cornerRadius: CGFloat = 10
+    }
     
     lazy var stackView: UIStackView = {
         let sv = UIStackView()
         sv.axis = .horizontal
         sv.translatesAutoresizingMaskIntoConstraints = false
-        sv.spacing = stackViewSpacing
+        sv.spacing = Constants.stackViewSpacing
         return sv
     }()
     
     lazy var icon: IconImageView = {
         let iv = IconImageView()
-        iv.layer.cornerRadius = cornerRadius
+        iv.layer.cornerRadius = Constants.cornerRadius
         iv.tintColor = AppColors.blue
         return iv
     }()
@@ -39,7 +55,7 @@ class ProfileButtonView: UIControl {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        layer.cornerRadius = cornerRadius
+        layer.cornerRadius = Constants.cornerRadius
         setupSubViews()
         setupSubViewsLayouts()
     }
@@ -65,8 +81,8 @@ class ProfileButtonView: UIControl {
         ])
         
         NSLayoutConstraint.activate([
-            icon.widthAnchor.constraint(equalToConstant: iconWidth),
-            icon.heightAnchor.constraint(equalToConstant: iconWidth)
+            icon.widthAnchor.constraint(equalToConstant: Constants.iconWidth),
+            icon.heightAnchor.constraint(equalToConstant: Constants.iconWidth)
         ])
     }
     

@@ -9,11 +9,11 @@ import UIKit
 
 class AuthButtonGenerator {
     
-    var buttons: [AuthButton] = []
+    var buttons: [AuthButtonViewModel] = []
     
-    let signoutButton = AuthButton(name: "Signout", image: AppProfileIcons.signoutIcon)
+    let signoutButton = AuthButtonViewModel(name: "Signout", image: AppProfileIcons.signoutIcon)
     
-    func generateButtons() -> [AuthButton] {
+    func generateButtons() -> [AuthButtonViewModel] {
         let buttons = [signoutButton]
         self.buttons = buttons
         return buttons

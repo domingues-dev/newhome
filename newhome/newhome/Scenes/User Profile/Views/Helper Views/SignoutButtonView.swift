@@ -11,16 +11,18 @@ class SignoutButtonView: UIControl {
     
     // MARK: - Properties
     
-    let iconWidth: CGFloat = 75
-    let stackViewSpacing: CGFloat = 50
-    let cornerRadius: CGFloat = 10
-    let fontSize: CGFloat = 20
+    enum Constants {
+        static let iconWidth: CGFloat = 75
+        static let stackViewSpacing: CGFloat = 50
+        static let cornerRadius: CGFloat = 10
+        static let fontSize: CGFloat = 20
+    }
     
     lazy var stackView: UIStackView = {
         let sv = UIStackView()
         sv.axis = .horizontal
         sv.translatesAutoresizingMaskIntoConstraints = false
-        sv.spacing = stackViewSpacing
+        sv.spacing = Constants.stackViewSpacing
         return sv
     }()
     
@@ -29,7 +31,7 @@ class SignoutButtonView: UIControl {
         iv.iconImageView.image = AppProfileIcons.signoutIcon
         iv.backgroundColor = AppColors.darkBlue
         iv.tintColor = AppColors.white
-        iv.layer.cornerRadius = cornerRadius
+        iv.layer.cornerRadius = Constants.cornerRadius
         return iv
     }()
     
@@ -40,7 +42,7 @@ class SignoutButtonView: UIControl {
             attributes: [
                 NSAttributedString.Key.font: UIFont(
                     name: "Lato-Bold",
-                    size: fontSize) ?? UIFont.boldSystemFont(ofSize: fontSize)])
+                    size: Constants.fontSize) ?? UIFont.boldSystemFont(ofSize: Constants.fontSize)])
         return l
     }()
     
@@ -61,7 +63,7 @@ class SignoutButtonView: UIControl {
         ])
         
         NSLayoutConstraint.activate([
-            icon.widthAnchor.constraint(equalToConstant: iconWidth)
+            icon.widthAnchor.constraint(equalToConstant: Constants.iconWidth)
         ])
     }
     

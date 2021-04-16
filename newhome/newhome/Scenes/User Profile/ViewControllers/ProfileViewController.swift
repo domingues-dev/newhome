@@ -56,15 +56,15 @@ class ProfileViewController: UIViewController {
 // MARK: - ProfileViewProtocol
 
 extension ProfileViewController: ProfileViewProtocol {
-    func updateView(with buttons: [AuthButton]) {
+    func updateView(with buttons: [AuthButtonViewModel]) {
         
     }
     
-    func updateView(with buttons: [Button]) {
+    func updateView(with buttons: [ButtonViewModel]) {
         
     }
     
-    func updateView(with users: [UserEntry]) {
+    func updateView(with users: [UserEntryViewModel]) {
         
     }
     

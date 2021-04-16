@@ -10,8 +10,17 @@ import UIKit
 class SignoutButtonCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Properties
+    var model: AuthButtonViewModel? {
+        didSet {
+            guard let image = model?.image,
+                  let label = model?.name
+                  else { return }
+            signoutButton.icon.iconImageView.image = image
+            signoutButton.label.text = label
+        }
+    }
     
-    let buttonMargin: CGFloat = 20
+    private let buttonMargin: CGFloat = 20
     
     lazy var signoutButton: SignoutButtonView = {
         let sb = SignoutButtonView()

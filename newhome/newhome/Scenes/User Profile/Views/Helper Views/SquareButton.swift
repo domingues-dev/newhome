@@ -11,8 +11,8 @@ class SquareButton: UIButton {
     
     // MARK: - Properties
     
-    let cornerRadius: CGFloat = 10
-    let size: CGFloat = 40
+    private let cornerRadius: CGFloat = 10
+    private let size: CGFloat = 40
     
     // MARK: - Initialization
     

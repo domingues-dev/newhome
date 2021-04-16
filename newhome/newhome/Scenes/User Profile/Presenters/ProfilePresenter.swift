@@ -26,15 +26,15 @@ class ProfilePresenter {
 // MARK: - ProfileBusinessPresenter
 
 extension ProfilePresenter: ProfileBusinessPresenter {
-    func didGetAuthButtons(_ buttons: [AuthButton]) {
+    func didGetAuthButtons(_ buttons: [AuthButtonViewModel]) {
         view.updateView(with: buttons)
     }
     
-    func didGetButtons(_ buttons: [Button]) {
+    func didGetButtons(_ buttons: [ButtonViewModel]) {
         view.updateView(with: buttons)
     }
     
-    func didFetchUsers(_ user: [UserEntry]) {
+    func didFetchUsers(_ user: [UserEntryViewModel]) {
         view.updateView(with: user)
     }
     
@@ -45,8 +45,7 @@ extension ProfilePresenter: ProfileBusinessPresenter {
 extension ProfilePresenter: ProfilePresenterProtocol {
     
     func viewDidLoad() {
-        /* Review: You should setup strings files localizations to not have hardcoded strings */
-        view.updateTitle("Profile")
+        view.updateTitle("profile_tab_title".localized)
         interactor.fetchUser()
         interactor.getButtons()
         interactor.getAuthButtons()

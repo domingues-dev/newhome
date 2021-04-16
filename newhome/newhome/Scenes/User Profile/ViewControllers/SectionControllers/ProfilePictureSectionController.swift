@@ -12,7 +12,7 @@ class ProfilePictureSectionController: ListSectionController {
     
     // MARK: - Properties
     
-    var entry: UserEntry!
+    var entry: UserEntryViewModel!
     
     override init() {
         super.init()
@@ -32,42 +32,17 @@ extension ProfilePictureSectionController {
         guard let context = collectionContext else {
             return .zero
         }
-        
         let width = context.containerSize.width
         return CGSize(width: width, height: 200)
     }
     
     override func didUpdate(to object: Any) {
-        entry = object as? UserEntry
+        entry = object as? UserEntryViewModel
     }
     
     override func cellForItem(at index: Int) -> UICollectionViewCell {
-        /*
-         Review: you could create a similiar extension like you have to dequeue cells from collection view
-         */
-        let cellClass: AnyClass = ProfilePictureCollectionViewCell.self
-        let cell = collectionContext!.dequeueReusableCell(of: cellClass, for: self, at: index)
-        if let cell = cell as? ProfilePictureCollectionViewCell {
-            /*
-             Review: This is not nice.. view interior views should be private to not be accessible
-             like this. Cells should have the view model property so they can configure themselves
-             
-             Ex. cell.model = entry
-             
-             and in the ProfilePictureCollectionViewCell.swift file:
-             
-             var model: UserEntry? {
-                didSet {
-                    if let viewModel = model {
-                        bindViewModel(model)
-                    }
-                }
-             }
-             
-             */
-            cell.profileImageView.imageView.image = entry.profileImage
-            cell.profileName.text = entry.name
-        }
+        let cell = ProfilePictureCollectionViewCell.dequeue(from: self, for: index)
+        cell.user = entry
         return cell
     }
     

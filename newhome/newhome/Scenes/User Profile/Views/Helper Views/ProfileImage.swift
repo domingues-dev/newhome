@@ -11,8 +11,8 @@ class ProfileImage: UIView {
     
     // MARK: - Properties
     
-    let borderWidth: CGFloat = 5
-    let imageMargin: CGFloat = 20
+    private let borderWidth: CGFloat = 5
+    private let imageMargin: CGFloat = 20
     
     lazy var imageView: UIImageView = {
         let iv = UIImageView()

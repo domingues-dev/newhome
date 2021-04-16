@@ -11,7 +11,17 @@ class ProfilePictureCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Properties
     
-    struct Constants {
+    var user: UserEntryViewModel? {
+        didSet {
+            guard let image = user?.profileImage,
+                  let name = user?.name
+            else { return }
+            profileImageView.imageView.image = image
+            profileName.text = name
+        }
+    }
+    
+    enum Constants {
         static let profileSize: CGFloat = 180
         static let profileImageSize: CGFloat = 130
         static let profileImageBorderWidth: CGFloat = 5
@@ -55,7 +65,6 @@ class ProfilePictureCollectionViewCell: UICollectionViewCell {
     
     lazy var profileImageView: ProfileImage = {
         let piv = ProfileImage()
-        piv.imageView.image = UIImage(named: "profile-picture")
         piv.imageView.layer.masksToBounds = true
         piv.imageView.layer.cornerRadius = Constants.profileImageCornerRadius
         piv.layer.cornerRadius = (Constants.profileImageSize / 2)
@@ -66,7 +75,6 @@ class ProfilePictureCollectionViewCell: UICollectionViewCell {
     
     lazy var profileName: UILabel = {
         let pn = UILabel()
-        pn.text = "Matt Cummings"
         pn.textColor = AppColors.darkBlue
         pn.font = UIFont(name: "Lato-Bold", size: Constants.fontSize)
         return pn

@@ -12,7 +12,7 @@ class ProfileButtonsSectionController: ListSectionController {
     
     // MARK: - Properties
     
-    var button: Button!
+    var button: ButtonViewModel!
     
     // MARK: - Initialization
     
@@ -38,17 +38,12 @@ extension ProfileButtonsSectionController {
     }
     
     override func didUpdate(to object: Any) {
-        button = object as? Button
+        button = object as? ButtonViewModel
     }
     
     override func cellForItem(at index: Int) -> UICollectionViewCell {
-        let cellClass: AnyClass =  ButtonCollectionViewCell.self
-        let cell = collectionContext!.dequeueReusableCell(of: cellClass, for: self, at: index)
-        if let cell = cell as? ButtonCollectionViewCell {
-            cell.button.label.text = button.name
-            cell.button.icon.iconImageView.image = button.image
-        }
-        
+        let cell = ButtonCollectionViewCell.dequeue(from: self, for: index)
+        cell.model = button
         return cell
     }
 }

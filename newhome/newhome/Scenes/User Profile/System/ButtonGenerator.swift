@@ -9,13 +9,13 @@ import UIKit
 
 class ButtonGenerator {
     
-    var buttons: [Button] = []
+    var buttons: [ButtonViewModel] = []
     
-    let purchaseButton = Button(name: "My Purchases", image: AppProfileIcons.purchaseIcon)
-    let addressButton = Button(name: "Addresses Book", image: AppProfileIcons.addressIcon)
-    let walletButton = Button(name: "My Wallet", image: AppProfileIcons.walletIcon)
+    let purchaseButton = ButtonViewModel(name: "My Purchases", image: AppProfileIcons.purchaseIcon)
+    let addressButton = ButtonViewModel(name: "Addresses Book", image: AppProfileIcons.addressIcon)
+    let walletButton = ButtonViewModel(name: "My Wallet", image: AppProfileIcons.walletIcon)
     
-    func generateButtons() -> [Button] {
+    func generateButtons() -> [ButtonViewModel] {
         let buttons = [purchaseButton, addressButton, walletButton]
         self.buttons = buttons
         return buttons
