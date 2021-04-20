@@ -31,6 +31,10 @@ class TabBarController: UITabBarController {
     
     private func configureHomeViewController() -> UIViewController {
         let homeViewController = HomeViewController()
+        let homeInteractor = HomeInteractor()
+        let homePresenter = HomePresenter(view: homeViewController, interactor: homeInteractor)
+        homeInteractor.presenter = homePresenter
+        homeViewController.presenter = homePresenter
         homeViewController.tabBarItem = UITabBarItem(title: nil, image: AppTabBarIcons.homeIcon, tag: 0)
         return homeViewController
     }
