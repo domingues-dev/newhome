@@ -8,6 +8,7 @@
 import UIKit
 import IGListKit
 
+/*Review: This is not the best naming. Maybe something like EmbeddedCollectionViewCell would be better **/
 class CollectionViewCell: UICollectionViewCell {
     
     // MARK: - Properties

@@ -52,6 +52,10 @@ extension HomeViewController: ListAdapterDataSource {
     }
     
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
+        /* Review: This is the not so good thing I was referring in the `SectionViewModel.swift` file
+           Would be better to check the type for RoomIdeasSectionViewModel and return that section controller
+           and let IGListKit diffable algorithms work as it is expected
+         */
         let sectionController = HomeSectionController()
         sectionController.roomIdeas = roomIdeas
         return sectionController

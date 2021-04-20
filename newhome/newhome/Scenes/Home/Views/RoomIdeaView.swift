@@ -7,6 +7,7 @@
 
 import UIKit
 
+/* Review: Should have Cell sufix */
 class RoomIdeaView: UICollectionViewCell {
     
     override init(frame: CGRect) {
