@@ -17,6 +17,8 @@
 		846367B7262E61AA0052C2FA /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846367B6262E61AA0052C2FA /* Home.swift */; };
 		846367BA262E62010052C2FA /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846367B9262E62010052C2FA /* HomePresenter.swift */; };
 		846367BF262E62F80052C2FA /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846367BE262E62F80052C2FA /* HomeInteractor.swift */; };
+		846367C7262EDD130052C2FA /* SectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846367C6262EDD130052C2FA /* SectionViewModel.swift */; };
+		846367CB262EDE030052C2FA /* SectionGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846367CA262EDE030052C2FA /* SectionGenerator.swift */; };
 		848E09F9261D508500FE538A /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 848E09EE261D508500FE538A /* Lato-LightItalic.ttf */; };
 		848E09FA261D508500FE538A /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 848E09EF261D508500FE538A /* Lato-Light.ttf */; };
 		848E09FB261D508500FE538A /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 848E09F0261D508500FE538A /* Lato-Thin.ttf */; };
@@ -54,6 +56,12 @@
 		84ACA7AB2627478A00F040A9 /* AuthButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ACA7AA2627478A00F040A9 /* AuthButtonViewModel.swift */; };
 		84ACA7AE262747DC00F040A9 /* AuthButtonGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ACA7AD262747DC00F040A9 /* AuthButtonGenerator.swift */; };
 		84ACA7B12627495A00F040A9 /* AuthButtonsSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ACA7B02627495A00F040A9 /* AuthButtonsSectionController.swift */; };
+		84DAD7DD262F076E00B11484 /* RoomIdeaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAD7DC262F076E00B11484 /* RoomIdeaView.swift */; };
+		84EC88C0262EE1FD00E59709 /* HomeSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EC88BF262EE1FD00E59709 /* HomeSectionController.swift */; };
+		84EC88C4262EE3E000E59709 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EC88C3262EE3E000E59709 /* CollectionViewCell.swift */; };
+		84EC88C7262EEC8700E59709 /* RoomIdeaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EC88C6262EEC8700E59709 /* RoomIdeaViewModel.swift */; };
+		84EC88CA262EED7E00E59709 /* RoomIdeaLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EC88C9262EED7E00E59709 /* RoomIdeaLoader.swift */; };
+		84EC88CD262F043100E59709 /* RoomIdeaSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EC88CC262F043100E59709 /* RoomIdeaSectionController.swift */; };
 		84FC8DBE2621043800C8B8F6 /* ProfilePictureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC8DBD2621043800C8B8F6 /* ProfilePictureCollectionViewCell.swift */; };
 		84FC8DC1262109D600C8B8F6 /* SignoutButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC8DC0262109D600C8B8F6 /* SignoutButtonCollectionViewCell.swift */; };
 		84FC8DC9262249BC00C8B8F6 /* ProfileButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC8DC8262249BC00C8B8F6 /* ProfileButtonView.swift */; };
@@ -72,6 +80,8 @@
 		846367B6262E61AA0052C2FA /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		846367B9262E62010052C2FA /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomePresenter.swift; path = newhome/Scenes/Home/Presenters/HomePresenter.swift; sourceTree = SOURCE_ROOT; };
 		846367BE262E62F80052C2FA /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		846367C6262EDD130052C2FA /* SectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionViewModel.swift; sourceTree = "<group>"; };
+		846367CA262EDE030052C2FA /* SectionGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionGenerator.swift; sourceTree = "<group>"; };
 		848E09EE261D508500FE538A /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
 		848E09EF261D508500FE538A /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		848E09F0261D508500FE538A /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Thin.ttf"; sourceTree = "<group>"; };
@@ -111,6 +121,12 @@
 		84ACA7AA2627478A00F040A9 /* AuthButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButtonViewModel.swift; sourceTree = "<group>"; };
 		84ACA7AD262747DC00F040A9 /* AuthButtonGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButtonGenerator.swift; sourceTree = "<group>"; };
 		84ACA7B02627495A00F040A9 /* AuthButtonsSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButtonsSectionController.swift; sourceTree = "<group>"; };
+		84DAD7DC262F076E00B11484 /* RoomIdeaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomIdeaView.swift; sourceTree = "<group>"; };
+		84EC88BF262EE1FD00E59709 /* HomeSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSectionController.swift; sourceTree = "<group>"; };
+		84EC88C3262EE3E000E59709 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		84EC88C6262EEC8700E59709 /* RoomIdeaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomIdeaViewModel.swift; sourceTree = "<group>"; };
+		84EC88C9262EED7E00E59709 /* RoomIdeaLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomIdeaLoader.swift; sourceTree = "<group>"; };
+		84EC88CC262F043100E59709 /* RoomIdeaSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomIdeaSectionController.swift; sourceTree = "<group>"; };
 		84FC8DBD2621043800C8B8F6 /* ProfilePictureCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePictureCollectionViewCell.swift; sourceTree = "<group>"; };
 		84FC8DC0262109D600C8B8F6 /* SignoutButtonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignoutButtonCollectionViewCell.swift; sourceTree = "<group>"; };
 		84FC8DC8262249BC00C8B8F6 /* ProfileButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileButtonView.swift; sourceTree = "<group>"; };
@@ -196,8 +212,28 @@
 		846367C2262E63350052C2FA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				84EC88C3262EE3E000E59709 /* CollectionViewCell.swift */,
+				84DAD7DC262F076E00B11484 /* RoomIdeaView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		846367C4262EDCD70052C2FA /* System */ = {
+			isa = PBXGroup;
+			children = (
+				846367CA262EDE030052C2FA /* SectionGenerator.swift */,
+				84EC88C9262EED7E00E59709 /* RoomIdeaLoader.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		846367C5262EDCE20052C2FA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				84EC88C6262EEC8700E59709 /* RoomIdeaViewModel.swift */,
+				846367C6262EDD130052C2FA /* SectionViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		848E09EA261D4D8900FE538A /* Resources */ = {
@@ -298,6 +334,8 @@
 		84AA56D6261D258F00C4835A /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				846367C5262EDCE20052C2FA /* ViewModels */,
+				846367C4262EDCD70052C2FA /* System */,
 				846367C2262E63350052C2FA /* Views */,
 				846367BD262E62EB0052C2FA /* Interactors */,
 				846367BC262E62DD0052C2FA /* Presenters */,
@@ -375,6 +413,7 @@
 		84AA56E3261D272000C4835A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				84EC88BE262EE1D300E59709 /* SectionControllers */,
 				84AA5704261D29AA00C4835A /* HomeViewController.swift */,
 			);
 			path = ViewControllers;
@@ -514,6 +553,15 @@
 				84ACA79D26271E6500F040A9 /* ProfilePictureSectionController.swift */,
 				84ACA7A72627412400F040A9 /* ProfileButtonsSectionController.swift */,
 				84ACA7B02627495A00F040A9 /* AuthButtonsSectionController.swift */,
+			);
+			path = SectionControllers;
+			sourceTree = "<group>";
+		};
+		84EC88BE262EE1D300E59709 /* SectionControllers */ = {
+			isa = PBXGroup;
+			children = (
+				84EC88BF262EE1FD00E59709 /* HomeSectionController.swift */,
+				84EC88CC262F043100E59709 /* RoomIdeaSectionController.swift */,
 			);
 			path = SectionControllers;
 			sourceTree = "<group>";
@@ -675,12 +723,14 @@
 				84ACA7A82627412400F040A9 /* ProfileButtonsSectionController.swift in Sources */,
 				84AA56FF261D292F00C4835A /* CategoryViewController.swift in Sources */,
 				84AA570B261D31D900C4835A /* Profile.swift in Sources */,
+				84EC88CA262EED7E00E59709 /* RoomIdeaLoader.swift in Sources */,
 				848E0A1D261F822C00FE538A /* SignoutButtonView.swift in Sources */,
 				84FC8DC1262109D600C8B8F6 /* SignoutButtonCollectionViewCell.swift in Sources */,
 				846367B7262E61AA0052C2FA /* Home.swift in Sources */,
 				840F2E1C2624FD8F00474348 /* ButtonCollectionViewCell.swift in Sources */,
 				840F2E132623465B00474348 /* IconImageView.swift in Sources */,
 				84FC8DBE2621043800C8B8F6 /* ProfilePictureCollectionViewCell.swift in Sources */,
+				84EC88C4262EE3E000E59709 /* CollectionViewCell.swift in Sources */,
 				84ACA7AE262747DC00F040A9 /* AuthButtonGenerator.swift in Sources */,
 				84ACA78C2626F4AE00F040A9 /* UserEntryViewModel.swift in Sources */,
 				84AA5711261D32CA00C4835A /* ProfileInteractor.swift in Sources */,
@@ -690,23 +740,29 @@
 				848E0A1A261F774F00FE538A /* SquareButton.swift in Sources */,
 				84AA56DC261D268F00C4835A /* TabBarController.swift in Sources */,
 				84AA5702261D297900C4835A /* MapViewController.swift in Sources */,
+				84EC88CD262F043100E59709 /* RoomIdeaSectionController.swift in Sources */,
 				84ACA79E26271E6500F040A9 /* ProfilePictureSectionController.swift in Sources */,
 				84FC8DC9262249BC00C8B8F6 /* ProfileButtonView.swift in Sources */,
 				84AA570E261D329F00C4835A /* ProfilePresenter.swift in Sources */,
 				848E0A11261F46A300FE538A /* Colors.swift in Sources */,
+				846367CB262EDE030052C2FA /* SectionGenerator.swift in Sources */,
 				84ACA7A426273BE900F040A9 /* ButtonGenerator.swift in Sources */,
 				84ACA7892626F13500F040A9 /* IGProfileViewController.swift in Sources */,
 				84AA5718261D3C1B00C4835A /* BaseNavigationController.swift in Sources */,
 				84ACA7AB2627478A00F040A9 /* AuthButtonViewModel.swift in Sources */,
 				84FC8DEF2622758600C8B8F6 /* ProfileImage.swift in Sources */,
 				84AA5708261D29D400C4835A /* ProfileViewController.swift in Sources */,
+				84DAD7DD262F076E00B11484 /* RoomIdeaView.swift in Sources */,
 				846367BA262E62010052C2FA /* HomePresenter.swift in Sources */,
 				846367992628F47D0052C2FA /* String+Localized.swift in Sources */,
+				846367C7262EDD130052C2FA /* SectionViewModel.swift in Sources */,
 				84AA56BD261D204A00C4835A /* AppDelegate.swift in Sources */,
+				84EC88C7262EEC8700E59709 /* RoomIdeaViewModel.swift in Sources */,
 				84AA5705261D29AA00C4835A /* HomeViewController.swift in Sources */,
 				84ACA7902626F56A00F040A9 /* UserLoader.swift in Sources */,
 				8426AB1C2620ED4900387914 /* UICollectionView+ReuseIdentifier.swift in Sources */,
 				840F2E2B2625DB8F00474348 /* ButtonViewModel.swift in Sources */,
+				84EC88C0262EE1FD00E59709 /* HomeSectionController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

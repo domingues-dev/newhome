@@ -6,25 +6,73 @@
 //
 
 import UIKit
+import IGListKit
 
 class HomeViewController: UIViewController {
     
     // MARK: - Properties
     
     var presenter: HomePresenterProtocol!
+    var sections: [SectionViewModel] = []
+    var roomIdeas: [RoomIdeaViewModel] = []
+    
+    lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.backgroundColor = AppColors.white
+        return cv
+    }()
+    
+    lazy var adapter: ListAdapter = {
+       return ListAdapter(
+        updater: ListAdapterUpdater(),
+        viewController: self,
+        workingRangeSize: .zero)
+    }()
     
     // MARK: - Initialization
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
+        presenter.viewDidLoad()
+        view.addSubview(collectionView)
+        collectionView.frame = view.bounds
+        adapter.collectionView = collectionView
+        adapter.dataSource = self
         navigationItem.title = "Home"
     }
+}
+
+// MARK: -
+
+extension HomeViewController: ListAdapterDataSource {
+    
+    func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
+        return sections
+    }
+    
+    func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
+        let sectionController = HomeSectionController()
+        sectionController.roomIdeas = roomIdeas
+        return sectionController
+    }
+    
+    func emptyView(for listAdapter: ListAdapter) -> UIView? {
+        nil
+    }
+    
 }
 
 // MARK: - HomeViewProtocol
 
 extension HomeViewController: HomeViewProtocol {
+    func updateView(with roomIdeas: [RoomIdeaViewModel]) {
+        self.roomIdeas = roomIdeas
+    }
+    
+    func updateView(with sections: [SectionViewModel]) {
+        self.sections = sections
+    }
     
     func isLoading(_ loading: Bool) {
     }
