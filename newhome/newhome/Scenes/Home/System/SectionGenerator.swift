@@ -9,17 +9,10 @@ import Foundation
 
 class SectionGenerator {
     
-    var sections: [SectionViewModel] = []
-    
-    func generateSections() -> [SectionViewModel] {
-        let sections = [
-            SectionViewModel(title: "You need to explore today"),
-            SectionViewModel(title: "Category"),
-            SectionViewModel(title: "Minimalistic choice"),
-            SectionViewModel(title: "Hot looks")
-        ]
-            self.sections = sections
-        return sections
+    func generateRoomIdeaSection() -> RoomIdeasSectionViewModel {
+        let section =
+            RoomIdeasSectionViewModel(title: "You need to explore today")
+        return section
     }
     
 }

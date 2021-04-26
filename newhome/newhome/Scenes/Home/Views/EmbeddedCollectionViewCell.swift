@@ -8,8 +8,7 @@
 import UIKit
 import IGListKit
 
-/*Review: This is not the best naming. Maybe something like EmbeddedCollectionViewCell would be better **/
-class CollectionViewCell: UICollectionViewCell {
+class EmbeddedCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Properties
     
@@ -17,7 +16,8 @@ class CollectionViewCell: UICollectionViewCell {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.backgroundColor = AppColors.lightBlue
+        cv.backgroundColor = AppColors.white
+        cv.showsHorizontalScrollIndicator = false
         return cv
     }()
     
@@ -26,7 +26,14 @@ class CollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(collectionView)
-        collectionView.frame = self.bounds
+        
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor)
+        ])
         
     }
     

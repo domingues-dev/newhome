@@ -26,14 +26,14 @@ class HomePresenter {
 // MARK: - HomeBusinessPresenter
 
 extension HomePresenter: HomeBusinessPresenter {
+    func didGetRoomIdeaSection(_ sections: RoomIdeasSectionViewModel) {
+        view.updateView(with: sections)
+    }
+    
     func didLoadRoomIdeas(_ roomIdeas: [RoomIdeaViewModel]) {
         view.updateView(with: roomIdeas)
     }
     
-    func didGetSections(_ sections: [SectionViewModel]) {
-        view.updateView(with: sections)
-    }
-        
 }
 
 // MARK: - HomePresenterProtocol
@@ -41,7 +41,7 @@ extension HomePresenter: HomeBusinessPresenter {
 extension HomePresenter: HomePresenterProtocol {
     
     func viewDidLoad() {
-        interactor.getSections()
+        interactor.getRoomIdeaSection()
         interactor.loadRoomIdeas()
     }
     

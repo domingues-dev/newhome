@@ -29,5 +29,17 @@ extension UICollectionViewCell {
             of: Self.self, for: sectionController, at: indexPath) as! Self
     }
     // swiftlint:enable force_cast
+}
+
+extension UICollectionReusableView {
     
+    // swiftlint:disable force_cast
+    static func dequeueSupllementaryView(of kind: String, from sectionController: ListSectionController, for index: Int) -> Self {
+        return sectionController.collectionContext?.dequeueReusableSupplementaryView(
+            ofKind: kind,
+            for: sectionController,
+            class: Self.self,
+            at: index) as! Self
+    }
+    // swiftlint:enable force_cast
 }

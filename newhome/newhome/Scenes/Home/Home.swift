@@ -10,7 +10,7 @@ import Foundation
 // Communication from presenter to view
 protocol HomeViewProtocol: class {
     func isLoading(_ loading: Bool)
-    func updateView(with sections: [SectionViewModel])
+    func updateView(with roomIdeaSection: RoomIdeasSectionViewModel)
     func updateView(with roomIdeas: [RoomIdeaViewModel])
 }
 
@@ -21,12 +21,12 @@ protocol HomePresenterProtocol: class {
 
 // Communication from presenter to interactor
 protocol HomeBusinessInteractor: class {
-    func getSections()
+    func getRoomIdeaSection()
     func loadRoomIdeas()
 }
 
 // Communication from interactor to presenter
 protocol HomeBusinessPresenter: class {
-    func didGetSections(_ sections: [SectionViewModel])
+    func didGetRoomIdeaSection(_ sections: RoomIdeasSectionViewModel)
     func didLoadRoomIdeas(_ roomIdeas: [RoomIdeaViewModel])
 }

@@ -14,7 +14,7 @@ class RoomIdeaSectionController: ListSectionController {
     
     override init() {
         super.init()
-        inset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 20)
+        inset = UIEdgeInsets(top: 0, left: 100, bottom: 0, right: 0)
     }
 }
 
@@ -26,8 +26,8 @@ extension RoomIdeaSectionController {
     
     override func sizeForItem(at index: Int) -> CGSize {
         guard let context = collectionContext else { return .zero }
-        let width = context.containerSize.width
-        return CGSize(width: width, height: 200)
+        let height = context.containerSize.height
+        return CGSize(width: 200, height: height)
     }
     
     override func didUpdate(to object: Any) {
@@ -35,8 +35,8 @@ extension RoomIdeaSectionController {
     }
     
     override func cellForItem(at index: Int) -> UICollectionViewCell {
-        let cell = RoomIdeaView.dequeue(from: self, for: index)
+        let cell = RoomIdeaCollectionViewCell.dequeue(from: self, for: index)
+        cell.roomIdea = roomIdea
         return cell
     }
-    
 }

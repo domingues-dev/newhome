@@ -13,8 +13,8 @@ class HomeViewController: UIViewController {
     // MARK: - Properties
     
     var presenter: HomePresenterProtocol!
-    var sections: [SectionViewModel] = []
     var roomIdeas: [RoomIdeaViewModel] = []
+    var roomIdeaSection: RoomIdeasSectionViewModel!
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -48,17 +48,15 @@ class HomeViewController: UIViewController {
 extension HomeViewController: ListAdapterDataSource {
     
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
-        return sections
+        var items: [ListDiffable] = []
+        items.append(roomIdeaSection)
+        return items
     }
     
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
-        /* Review: This is the not so good thing I was referring in the `SectionViewModel.swift` file
-           Would be better to check the type for RoomIdeasSectionViewModel and return that section controller
-           and let IGListKit diffable algorithms work as it is expected
-         */
-        let sectionController = HomeSectionController()
-        sectionController.roomIdeas = roomIdeas
-        return sectionController
+        let homeSectionController = HomeSectionController()
+        homeSectionController.roomIdeas = roomIdeaSection.items
+        return homeSectionController
     }
     
     func emptyView(for listAdapter: ListAdapter) -> UIView? {
@@ -70,12 +68,13 @@ extension HomeViewController: ListAdapterDataSource {
 // MARK: - HomeViewProtocol
 
 extension HomeViewController: HomeViewProtocol {
+    
     func updateView(with roomIdeas: [RoomIdeaViewModel]) {
-        self.roomIdeas = roomIdeas
+        roomIdeaSection.items = roomIdeas
     }
     
-    func updateView(with sections: [SectionViewModel]) {
-        self.sections = sections
+    func updateView(with roomIdeaSection: RoomIdeasSectionViewModel) {
+        self.roomIdeaSection = roomIdeaSection
     }
     
     func isLoading(_ loading: Bool) {

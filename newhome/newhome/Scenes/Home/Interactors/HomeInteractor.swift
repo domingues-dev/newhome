@@ -19,13 +19,12 @@ class HomeInteractor {
 // MARK: - HomeBusinessInteractor
 
 extension HomeInteractor: HomeBusinessInteractor {
+    func getRoomIdeaSection() {
+        self.presenter.didGetRoomIdeaSection(sectionGenerator.generateRoomIdeaSection())
+    }
     
     func loadRoomIdeas() {
         self.presenter.didLoadRoomIdeas(roomIdeaLoader.loadRoomIdeas())
-    }
-    
-    func getSections() {
-        self.presenter.didGetSections(sectionGenerator.generateSections())
     }
     
 }

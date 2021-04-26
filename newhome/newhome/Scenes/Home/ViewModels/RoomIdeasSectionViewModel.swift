@@ -8,28 +8,31 @@
 import UIKit
 import IGListKit
 
-class SectionViewModel: NSObject {
+class RoomIdeasSectionViewModel: NSObject {
     
     var title: String
+    var items: [RoomIdeaViewModel] = []
     
     init(title: String) {
         self.title = title
     }
 }
 
-extension SectionViewModel: ListDiffable {
+extension RoomIdeasSectionViewModel: ListDiffable {
     
     func diffIdentifier() -> NSObjectProtocol {
-        return self
+        return title as NSString
     }
     
     func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
-        return isEqual(object)
+        if self === object { return true }
+        guard let rhs = object as? RoomIdeasSectionViewModel else { return false }
+        return title == rhs.title && items == rhs.items
     }
     
 }
 
-/* Review: Isto não é a melhor maneira para fazer.. Ter cenas genericas não é mau,
+/* Isto não é a melhor maneira para fazer.. Ter cenas genericas não é mau,
  mas aqui acho que era preferivel ter modelos mais especificos para cada secçao.
  Ao teres assim, estás a acabar por martelar um pouco o código para os section controllers mais à frente.
  É sempre melhor começar com casos especificos, e no fim, se vires padrões nos teus modelos e no código,
