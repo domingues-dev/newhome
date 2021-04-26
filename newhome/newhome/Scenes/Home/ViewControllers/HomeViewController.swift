@@ -15,6 +15,8 @@ class HomeViewController: UIViewController {
     var presenter: HomePresenterProtocol!
     var roomIdeas: [RoomIdeaViewModel] = []
     var roomIdeaSection: RoomIdeasSectionViewModel!
+    var categorySection: CategorySectionViewModel!
+    var categories: [CategoryViewModel] = []
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -50,11 +52,17 @@ extension HomeViewController: ListAdapterDataSource {
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
         var items: [ListDiffable] = []
         items.append(roomIdeaSection)
+        items.append(categorySection)
         return items
     }
     
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
         let homeSectionController = HomeSectionController()
+        let categorySectionController = CategorySectionController()
+        if object is CategorySectionViewModel {
+            categorySectionController.categories = categorySection.items
+            return categorySectionController
+        }
         homeSectionController.roomIdeas = roomIdeaSection.items
         return homeSectionController
     }
@@ -68,6 +76,13 @@ extension HomeViewController: ListAdapterDataSource {
 // MARK: - HomeViewProtocol
 
 extension HomeViewController: HomeViewProtocol {
+    func upadteView(with categories: [CategoryViewModel]) {
+        categorySection.items = categories
+    }
+    
+    func updateView(with categorySection: CategorySectionViewModel) {
+        self.categorySection = categorySection
+    }
     
     func updateView(with roomIdeas: [RoomIdeaViewModel]) {
         roomIdeaSection.items = roomIdeas

@@ -15,4 +15,9 @@ class SectionGenerator {
         return section
     }
     
+    func generateCategorySection() -> CategorySectionViewModel {
+        let section = CategorySectionViewModel(title: "Category")
+        return section
+    }
+    
 }
