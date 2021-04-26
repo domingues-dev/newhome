@@ -15,11 +15,20 @@ class HomeInteractor {
     let sectionGenerator = SectionGenerator()
     let roomIdeaLoader = RoomIdeaLoader()
     let categoryLoader = CategoryLoader()
+    let minimalistLoader = MinimalistLoader()
 }
 
 // MARK: - HomeBusinessInteractor
 
 extension HomeInteractor: HomeBusinessInteractor {
+    func getMinimalistSection() {
+        self.presenter.didGetMinimalistSection(sectionGenerator.generateMinimalistSection())
+    }
+    
+    func loadMinimalistChoices() {
+        self.presenter.didLoadMinimalistChoices(minimalistLoader.loadChoices())
+    }
+    
     func loadCategories() {
         self.presenter.didLoadCategories(categoryLoader.loadCategories())
     }

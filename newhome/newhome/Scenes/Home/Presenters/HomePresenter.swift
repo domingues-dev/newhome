@@ -26,8 +26,16 @@ class HomePresenter {
 // MARK: - HomeBusinessPresenter
 
 extension HomePresenter: HomeBusinessPresenter {
+    func didGetMinimalistSection(_ section: MinimalistSectionViewModel) {
+        view.updateView(with: section)
+    }
+    
+    func didLoadMinimalistChoices(_ choices: [MinimalistViewModel]) {
+        view.updateView(with: choices)
+    }
+    
     func didLoadCategories(_ categories: [CategoryViewModel]) {
-        view.upadteView(with: categories)
+        view.updateView(with: categories)
     }
     
     func didGetCategorySection(_ section: CategorySectionViewModel) {
@@ -53,5 +61,7 @@ extension HomePresenter: HomePresenterProtocol {
         interactor.getCategorySection()
         interactor.loadRoomIdeas()
         interactor.loadCategories()
+        interactor.getMinimalistSection()
+        interactor.loadMinimalistChoices()
     }
 }

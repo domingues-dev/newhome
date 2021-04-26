@@ -65,6 +65,13 @@
 		84D2AA4A2636CF0E00946594 /* CategoryLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2AA492636CF0E00946594 /* CategoryLoader.swift */; };
 		84D2AA552636D4C600946594 /* CategoriesSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2AA542636D4C600946594 /* CategoriesSectionController.swift */; };
 		84D2AA582636FD9B00946594 /* HeaderSectionSupplementaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2AA572636FD9B00946594 /* HeaderSectionSupplementaryCell.swift */; };
+		84D2AA5B263700AC00946594 /* MinimalistSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2AA5A263700AC00946594 /* MinimalistSectionViewModel.swift */; };
+		84D2AA5E263700E100946594 /* MinimalistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2AA5D263700E100946594 /* MinimalistViewModel.swift */; };
+		84D2AA612637014A00946594 /* MinimalistLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2AA602637014A00946594 /* MinimalistLoader.swift */; };
+		84D2AA672637129B00946594 /* MinimalistSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2AA662637129B00946594 /* MinimalistSectionController.swift */; };
+		84D2AA6A263713AA00946594 /* ChoicesSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2AA69263713AA00946594 /* ChoicesSectionController.swift */; };
+		84D2AA6D2637147000946594 /* EmbeddedVerticalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2AA6C2637147000946594 /* EmbeddedVerticalCollectionViewCell.swift */; };
+		84D2AA702637178800946594 /* ChoiceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2AA6F2637178800946594 /* ChoiceCollectionViewCell.swift */; };
 		84DAD7DD262F076E00B11484 /* RoomIdeaViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAD7DC262F076E00B11484 /* RoomIdeaViewCollectionViewCell.swift */; };
 		84EC88C0262EE1FD00E59709 /* HomeSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EC88BF262EE1FD00E59709 /* HomeSectionController.swift */; };
 		84EC88C4262EE3E000E59709 /* EmbeddedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EC88C3262EE3E000E59709 /* EmbeddedCollectionViewCell.swift */; };
@@ -139,6 +146,13 @@
 		84D2AA492636CF0E00946594 /* CategoryLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryLoader.swift; sourceTree = "<group>"; };
 		84D2AA542636D4C600946594 /* CategoriesSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesSectionController.swift; sourceTree = "<group>"; };
 		84D2AA572636FD9B00946594 /* HeaderSectionSupplementaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSectionSupplementaryCell.swift; sourceTree = "<group>"; };
+		84D2AA5A263700AC00946594 /* MinimalistSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimalistSectionViewModel.swift; sourceTree = "<group>"; };
+		84D2AA5D263700E100946594 /* MinimalistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimalistViewModel.swift; sourceTree = "<group>"; };
+		84D2AA602637014A00946594 /* MinimalistLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimalistLoader.swift; sourceTree = "<group>"; };
+		84D2AA662637129B00946594 /* MinimalistSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimalistSectionController.swift; sourceTree = "<group>"; };
+		84D2AA69263713AA00946594 /* ChoicesSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicesSectionController.swift; sourceTree = "<group>"; };
+		84D2AA6C2637147000946594 /* EmbeddedVerticalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbeddedVerticalCollectionViewCell.swift; sourceTree = "<group>"; };
+		84D2AA6F2637178800946594 /* ChoiceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceCollectionViewCell.swift; sourceTree = "<group>"; };
 		84DAD7DC262F076E00B11484 /* RoomIdeaViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomIdeaViewCollectionViewCell.swift; sourceTree = "<group>"; };
 		84EC88BF262EE1FD00E59709 /* HomeSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSectionController.swift; sourceTree = "<group>"; };
 		84EC88C3262EE3E000E59709 /* EmbeddedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbeddedCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -236,6 +250,8 @@
 				84D2AA3A2632BD5300946594 /* RoomIdeaSupplementaryHeader.swift */,
 				84D2AA462636CCE600946594 /* CategoryViewCell.swift */,
 				84D2AA572636FD9B00946594 /* HeaderSectionSupplementaryCell.swift */,
+				84D2AA6C2637147000946594 /* EmbeddedVerticalCollectionViewCell.swift */,
+				84D2AA6F2637178800946594 /* ChoiceCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -246,6 +262,7 @@
 				846367CA262EDE030052C2FA /* SectionGenerator.swift */,
 				84EC88C9262EED7E00E59709 /* RoomIdeaLoader.swift */,
 				84D2AA492636CF0E00946594 /* CategoryLoader.swift */,
+				84D2AA602637014A00946594 /* MinimalistLoader.swift */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -257,6 +274,8 @@
 				846367C6262EDD130052C2FA /* RoomIdeasSectionViewModel.swift */,
 				84D2AA3D2636C8C200946594 /* CategorySectionViewModel.swift */,
 				84D2AA402636C90F00946594 /* CategoryViewModel.swift */,
+				84D2AA5A263700AC00946594 /* MinimalistSectionViewModel.swift */,
+				84D2AA5D263700E100946594 /* MinimalistViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -589,6 +608,8 @@
 				84EC88CC262F043100E59709 /* RoomIdeaSectionController.swift */,
 				84D2AA432636CB2900946594 /* CategorySectionController.swift */,
 				84D2AA542636D4C600946594 /* CategoriesSectionController.swift */,
+				84D2AA662637129B00946594 /* MinimalistSectionController.swift */,
+				84D2AA69263713AA00946594 /* ChoicesSectionController.swift */,
 			);
 			path = SectionControllers;
 			sourceTree = "<group>";
@@ -751,9 +772,12 @@
 				84D2AA4A2636CF0E00946594 /* CategoryLoader.swift in Sources */,
 				84AA56FF261D292F00C4835A /* CategoryViewController.swift in Sources */,
 				84D2AA382632391700946594 /* FavoriteButton.swift in Sources */,
+				84D2AA612637014A00946594 /* MinimalistLoader.swift in Sources */,
 				84AA570B261D31D900C4835A /* Profile.swift in Sources */,
 				84EC88CA262EED7E00E59709 /* RoomIdeaLoader.swift in Sources */,
 				84D2AA582636FD9B00946594 /* HeaderSectionSupplementaryCell.swift in Sources */,
+				84D2AA5E263700E100946594 /* MinimalistViewModel.swift in Sources */,
+				84D2AA6A263713AA00946594 /* ChoicesSectionController.swift in Sources */,
 				848E0A1D261F822C00FE538A /* SignoutButtonView.swift in Sources */,
 				84FC8DC1262109D600C8B8F6 /* SignoutButtonCollectionViewCell.swift in Sources */,
 				846367B7262E61AA0052C2FA /* Home.swift in Sources */,
@@ -761,16 +785,20 @@
 				84D2AA3B2632BD5300946594 /* RoomIdeaSupplementaryHeader.swift in Sources */,
 				840F2E132623465B00474348 /* IconImageView.swift in Sources */,
 				84FC8DBE2621043800C8B8F6 /* ProfilePictureCollectionViewCell.swift in Sources */,
+				84D2AA5B263700AC00946594 /* MinimalistSectionViewModel.swift in Sources */,
 				84EC88C4262EE3E000E59709 /* EmbeddedCollectionViewCell.swift in Sources */,
 				84D2AA442636CB2900946594 /* CategorySectionController.swift in Sources */,
 				84ACA7AE262747DC00F040A9 /* AuthButtonGenerator.swift in Sources */,
 				84ACA78C2626F4AE00F040A9 /* UserEntryViewModel.swift in Sources */,
+				84D2AA702637178800946594 /* ChoiceCollectionViewCell.swift in Sources */,
 				84AA5711261D32CA00C4835A /* ProfileInteractor.swift in Sources */,
 				84ACA7B12627495A00F040A9 /* AuthButtonsSectionController.swift in Sources */,
 				84AA56FB261D28B500C4835A /* FavoriteItemsViewController.swift in Sources */,
 				846367BF262E62F80052C2FA /* HomeInteractor.swift in Sources */,
 				848E0A1A261F774F00FE538A /* SquareButton.swift in Sources */,
 				84AA56DC261D268F00C4835A /* TabBarController.swift in Sources */,
+				84D2AA672637129B00946594 /* MinimalistSectionController.swift in Sources */,
+				84D2AA6D2637147000946594 /* EmbeddedVerticalCollectionViewCell.swift in Sources */,
 				84AA5702261D297900C4835A /* MapViewController.swift in Sources */,
 				84EC88CD262F043100E59709 /* RoomIdeaSectionController.swift in Sources */,
 				84D2AA3E2636C8C200946594 /* CategorySectionViewModel.swift in Sources */,

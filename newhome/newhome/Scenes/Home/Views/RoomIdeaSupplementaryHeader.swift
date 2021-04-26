@@ -18,7 +18,7 @@ class RoomIdeaSupplementaryHeader: UICollectionReusableView {
     
     lazy var label: UILabel = {
        let l = UILabel()
-        l.font = UIFont(name: "Lato-Bold", size: 20) ?? .boldSystemFont(ofSize: 20)
+        l.font = UIFont(name: "Lato-Black", size: 24) ?? .boldSystemFont(ofSize: 24)
         l.numberOfLines = 2
         return l
     }()

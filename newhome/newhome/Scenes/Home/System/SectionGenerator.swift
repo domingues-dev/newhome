@@ -20,4 +20,8 @@ class SectionGenerator {
         return section
     }
     
+    func generateMinimalistSection() -> MinimalistSectionViewModel {
+        let section = MinimalistSectionViewModel(title: "Minimalist Choices")
+        return section
+    }
 }

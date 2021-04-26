@@ -14,7 +14,10 @@ protocol HomeViewProtocol: class {
     func updateView(with roomIdeas: [RoomIdeaViewModel])
     
     func updateView(with categorySection: CategorySectionViewModel)
-    func upadteView(with categories: [CategoryViewModel])
+    func updateView(with categories: [CategoryViewModel])
+    
+    func updateView(with minimalistSection: MinimalistSectionViewModel)
+    func updateView(with choices: [MinimalistViewModel])
 }
 
 // Communication from view to presenter
@@ -30,6 +33,9 @@ protocol HomeBusinessInteractor: class {
     func getCategorySection()
     func loadCategories()
     
+    func getMinimalistSection()
+    func loadMinimalistChoices()
+    
 }
 
 // Communication from interactor to presenter
@@ -39,4 +45,7 @@ protocol HomeBusinessPresenter: class {
     
     func didGetCategorySection(_ section: CategorySectionViewModel)
     func didLoadCategories(_ categories: [CategoryViewModel])
+    
+    func didGetMinimalistSection(_ section: MinimalistSectionViewModel)
+    func didLoadMinimalistChoices(_ choices: [MinimalistViewModel])
 }

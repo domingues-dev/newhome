@@ -11,9 +11,16 @@ class HeaderSectionSupplementaryCell: UICollectionReusableView {
     
     // MARK: - Properties
     
-    var section: CategorySectionViewModel? {
+    var categorySection: CategorySectionViewModel? {
         didSet {
-            guard let title = section?.title else { return }
+            guard let title = categorySection?.title else { return }
+            titleLabel.text = title
+        }
+    }
+    
+    var minimalistSection: MinimalistSectionViewModel? {
+        didSet {
+            guard let title = minimalistSection?.title else { return }
             titleLabel.text = title
         }
     }
