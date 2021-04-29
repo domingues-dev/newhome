@@ -14,6 +14,7 @@ class PageViewController: UIViewController {
     
     var data: SplashViewModel? {
         didSet {
+            /* Review: Estas coisas assim deviam estar numa funçao bindViewModel(_ viewModel: SplashViewModel) em vez de estar aqui tudo no didSet */
             guard let image = data?.image,
                   let title = data?.title,
                   let descriptionText = data?.description
