@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SplashViewController: UIViewController {
+class PageViewController: UIViewController {
     
     // MARK: - Properties
     var pageIndex: Int!
@@ -69,7 +69,7 @@ class SplashViewController: UIViewController {
         NSLayoutConstraint.activate([
             descriptionLabel.topAnchor.constraint(equalTo: mainLabel.bottomAnchor, constant: 20),
             descriptionLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            descriptionLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 20),
+            descriptionLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             descriptionLabel.heightAnchor.constraint(equalToConstant: 40)
         ])
     }
