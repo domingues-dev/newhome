@@ -13,6 +13,8 @@ class SplashPageViewController: UIPageViewController {
     
     let splashGenerator = SplashDataGenerator()
     var data: [SplashViewModel] = []
+    
+    /* O que é este frame view controller? **/
     let frameViewController = SplashViewController()
     lazy var button: UIButton = {
         let btn = UIButton()
@@ -26,6 +28,8 @@ class SplashPageViewController: UIPageViewController {
         view.backgroundColor = AppColors.white
         data = splashGenerator.generateSplashScreens()
         self.dataSource = self
+        
+        /* Review: aqui ficava melhor um for pelo array e instanciar um view controller por cada elemento **/
         let firstpage = SplashViewController()
         firstpage.data = data.first
         let secondPage = SplashViewController()
