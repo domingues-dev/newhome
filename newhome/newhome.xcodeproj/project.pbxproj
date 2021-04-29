@@ -56,6 +56,10 @@
 		84ACA7AB2627478A00F040A9 /* AuthButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ACA7AA2627478A00F040A9 /* AuthButtonViewModel.swift */; };
 		84ACA7AE262747DC00F040A9 /* AuthButtonGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ACA7AD262747DC00F040A9 /* AuthButtonGenerator.swift */; };
 		84ACA7B12627495A00F040A9 /* AuthButtonsSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ACA7B02627495A00F040A9 /* AuthButtonsSectionController.swift */; };
+		84D22575263969B800A90CE7 /* SplashPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D22574263969B800A90CE7 /* SplashPageViewController.swift */; };
+		84D2257C26396B8D00A90CE7 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2257B26396B8D00A90CE7 /* SplashViewController.swift */; };
+		84D22580263975B500A90CE7 /* SpashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2257F263975B500A90CE7 /* SpashViewModel.swift */; };
+		84D225862639765B00A90CE7 /* SplashDataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D225852639765B00A90CE7 /* SplashDataGenerator.swift */; };
 		84D2AA382632391700946594 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2AA372632391700946594 /* FavoriteButton.swift */; };
 		84D2AA3B2632BD5300946594 /* RoomIdeaSupplementaryHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2AA3A2632BD5300946594 /* RoomIdeaSupplementaryHeader.swift */; };
 		84D2AA3E2636C8C200946594 /* CategorySectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2AA3D2636C8C200946594 /* CategorySectionViewModel.swift */; };
@@ -137,6 +141,10 @@
 		84ACA7AA2627478A00F040A9 /* AuthButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButtonViewModel.swift; sourceTree = "<group>"; };
 		84ACA7AD262747DC00F040A9 /* AuthButtonGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButtonGenerator.swift; sourceTree = "<group>"; };
 		84ACA7B02627495A00F040A9 /* AuthButtonsSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButtonsSectionController.swift; sourceTree = "<group>"; };
+		84D22574263969B800A90CE7 /* SplashPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPageViewController.swift; sourceTree = "<group>"; };
+		84D2257B26396B8D00A90CE7 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		84D2257F263975B500A90CE7 /* SpashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpashViewModel.swift; sourceTree = "<group>"; };
+		84D225852639765B00A90CE7 /* SplashDataGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashDataGenerator.swift; sourceTree = "<group>"; };
 		84D2AA372632391700946594 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		84D2AA3A2632BD5300946594 /* RoomIdeaSupplementaryHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomIdeaSupplementaryHeader.swift; sourceTree = "<group>"; };
 		84D2AA3D2636C8C200946594 /* CategorySectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySectionViewModel.swift; sourceTree = "<group>"; };
@@ -351,6 +359,7 @@
 		84AA56D4261D256900C4835A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				84D225722639699A00A90CE7 /* Splash */,
 				84AA56DA261D266D00C4835A /* TabBar Controller */,
 				84AA56D9261D264300C4835A /* FavoriteItems */,
 				84AA56D8261D262B00C4835A /* Category & Search */,
@@ -601,6 +610,41 @@
 			path = SectionControllers;
 			sourceTree = "<group>";
 		};
+		84D225722639699A00A90CE7 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				84D225842639764900A90CE7 /* System */,
+				84D2257E263975AD00A90CE7 /* View Model */,
+				84D22573263969A300A90CE7 /* View Controllers */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		84D22573263969A300A90CE7 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				84D22574263969B800A90CE7 /* SplashPageViewController.swift */,
+				84D2257B26396B8D00A90CE7 /* SplashViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		84D2257E263975AD00A90CE7 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				84D2257F263975B500A90CE7 /* SpashViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		84D225842639764900A90CE7 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				84D225852639765B00A90CE7 /* SplashDataGenerator.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
 		84EC88BE262EE1D300E59709 /* SectionControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -783,6 +827,7 @@
 				846367B7262E61AA0052C2FA /* Home.swift in Sources */,
 				840F2E1C2624FD8F00474348 /* ButtonCollectionViewCell.swift in Sources */,
 				84D2AA3B2632BD5300946594 /* RoomIdeaSupplementaryHeader.swift in Sources */,
+				84D22580263975B500A90CE7 /* SpashViewModel.swift in Sources */,
 				840F2E132623465B00474348 /* IconImageView.swift in Sources */,
 				84FC8DBE2621043800C8B8F6 /* ProfilePictureCollectionViewCell.swift in Sources */,
 				84D2AA5B263700AC00946594 /* MinimalistSectionViewModel.swift in Sources */,
@@ -799,6 +844,7 @@
 				84AA56DC261D268F00C4835A /* TabBarController.swift in Sources */,
 				84D2AA672637129B00946594 /* MinimalistSectionController.swift in Sources */,
 				84D2AA6D2637147000946594 /* EmbeddedVerticalCollectionViewCell.swift in Sources */,
+				84D225862639765B00A90CE7 /* SplashDataGenerator.swift in Sources */,
 				84AA5702261D297900C4835A /* MapViewController.swift in Sources */,
 				84EC88CD262F043100E59709 /* RoomIdeaSectionController.swift in Sources */,
 				84D2AA3E2636C8C200946594 /* CategorySectionViewModel.swift in Sources */,
@@ -809,6 +855,7 @@
 				84D2AA412636C90F00946594 /* CategoryViewModel.swift in Sources */,
 				848E0A11261F46A300FE538A /* Colors.swift in Sources */,
 				846367CB262EDE030052C2FA /* SectionGenerator.swift in Sources */,
+				84D22575263969B800A90CE7 /* SplashPageViewController.swift in Sources */,
 				84ACA7A426273BE900F040A9 /* ButtonGenerator.swift in Sources */,
 				84ACA7892626F13500F040A9 /* IGProfileViewController.swift in Sources */,
 				84D2AA472636CCE600946594 /* CategoryViewCell.swift in Sources */,
@@ -823,6 +870,7 @@
 				84AA56BD261D204A00C4835A /* AppDelegate.swift in Sources */,
 				84EC88C7262EEC8700E59709 /* RoomIdeaViewModel.swift in Sources */,
 				84AA5705261D29AA00C4835A /* HomeViewController.swift in Sources */,
+				84D2257C26396B8D00A90CE7 /* SplashViewController.swift in Sources */,
 				84ACA7902626F56A00F040A9 /* UserLoader.swift in Sources */,
 				8426AB1C2620ED4900387914 /* UICollectionView+ReuseIdentifier.swift in Sources */,
 				840F2E2B2625DB8F00474348 /* ButtonViewModel.swift in Sources */,
